@@ -8,7 +8,7 @@ License: GPL-3
 URL: https://github.com/kangarooaifr/ktools
 BugReports: https://github.com/kangarooaifr/ktools/issues
 Depends:
-    R (>= 4.2.0)
+    R (>= 4.1.0)
 Imports:
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
