@@ -8,3 +8,5 @@ R Package
 <!-- badges: start -->
   [![Codecov test coverage](https://codecov.io/gh/kangarooaifr/ktools/branch/master/graph/badge.svg)](https://app.codecov.io/gh/kangarooaifr/ktools?branch=master)
   <!-- badges: end -->
+
+This is a R package with various tools.
