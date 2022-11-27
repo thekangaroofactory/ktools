@@ -1,26 +1,31 @@
-comment: false
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
 
-coverage:
-  status:
-    project:
-      default:
-        target: auto
-        threshold: 1%
-        informational: true
-    patch:
-      default:
-        target: auto
-        threshold: 1%
-        informational: true
+name: test-coverage
 
-comment: false
+jobs:
+  test-coverage:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
 
-language: R
+    steps:
+      - uses: actions/checkout@v2
 
-sudo: false
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
 
-cache: packages
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::covr
+          needs: coverage
 
-after_success:
-
-- Rscript -e 'covr::codecov()'
+      - name: Test coverage
+        run: |
+          R CMD INSTALL .
+          source shim_package.sh
+          Rscript -e 'covr::codecov()'
