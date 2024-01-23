@@ -1,17 +1,17 @@
 Package: ktools
-Title: Utility Tools
-Version: 0.0.0.9000
+Title: TheKangarooFactory Utility Tools
+Version: 0.0.0.9001
 Authors@R: 
-    person("Philippe", "Peret", , "philippe.peret@kangaroo-ai.fr", role = c("aut", "cre"))
+    person("Philippe", "Peret", , "philippe.peret@hotmail.com", role = c("aut", "cre"))
 Description: The package contains various tools to make (my) life easier.
 License: GPL-3
-URL: https://github.com/kangarooaifr/ktools
-BugReports: https://github.com/kangarooaifr/ktools/issues
+URL: https://github.com/thekangaroofactory/ktools
+BugReports: https://github.com/thekangaroofactory/ktools/issues
 Depends:
     R (>= 4.2.0)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.2
 Suggests: 
     covr,
     testthat (>= 3.0.0)
