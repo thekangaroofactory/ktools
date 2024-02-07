@@ -8,8 +8,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' getNsFunction("pkg::fun")
-#'
+#'}
 
 
 getNsFunction <- function(x) {

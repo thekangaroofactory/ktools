@@ -16,6 +16,7 @@ the value of the exported function name in namespace pkg
 Trick to solve the use of :: for package functions in do.call()
 }
 \examples{
+\dontrun{
 getNsFunction("pkg::fun")
-
+}
 }
