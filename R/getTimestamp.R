@@ -5,6 +5,7 @@
 #'
 #' @param k a numeric (default = 1000), used as a multiplication factor
 #' @param digits an integer (default = 0) passed to round() function
+#' @param silent an optional (default = FALSE) logical. If TRUE, no traces will go to the console
 #'
 #' @return a numeric
 #' @export getTimestamp
@@ -20,14 +21,15 @@
 
 
 # -- function definintion
-getTimestamp <- function(k = 1000, digits = 0)
+getTimestamp <- function(k = 1000, digits = 0, silent = FALSE)
 {
 
   # compute timestamp
   timestamp <- round(as.numeric(Sys.time()) * k, digits = digits)
 
   # trace
-  cat("[getTimestamp] timestamp = ", as.character(timestamp), "\n")
+  if(!silent)
+    cat("[getTimestamp] timestamp = ", as.character(timestamp), "\n")
 
   # return
   timestamp

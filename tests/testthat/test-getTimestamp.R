@@ -1,17 +1,37 @@
 
 
-# -- call function
-feedback  <- getTimestamp()
+test_that("getTimestamp works", {
 
-# -- test type
-expect_true(is.numeric(feedback))
+  # -- call function
+  x  <- getTimestamp()
 
-# -- test nb of digits
-expect_identical(floor(log10(feedback)) + 1, 13)
+  # -- test type
+  expect_true(is.numeric(x))
+
+  # -- test nb of digits
+  expect_identical(floor(log10(x)) + 1, 13)
+
+})
 
 
-# -- call function
-feedback  <- getTimestamp(k = 1)
+test_that("getTimestamp k = 1 works", {
 
-# -- test nb of digits
-expect_identical(floor(log10(feedback)) + 1, 10)
+  # -- call function
+  x  <- getTimestamp(k = 1)
+
+  # -- test nb of digits
+  expect_identical(floor(log10(x)) + 1, 10)
+
+})
+
+
+test_that("getTimestamp silent = TRUE works", {
+
+  # -- call function
+  x  <- getTimestamp(silent = TRUE)
+
+  # -- test nb of digits
+  expect_identical(floor(log10(x)) + 1, 13)
+
+})
+

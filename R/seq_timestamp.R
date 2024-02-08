@@ -30,7 +30,7 @@ seq_timestamp <- function(n = 2){
 
     id_seq <- replicate(n = n, {
       Sys.sleep(0.0005)
-      ktools::getTimestamp()})
+      ktools::getTimestamp(silent = FALSE)})
 
   }
 
