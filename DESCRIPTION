@@ -1,6 +1,6 @@
 Package: ktools
-Title: TheKangarooFactory Utility Tools
-Version: 0.0.0.9001
+Title: Utility Tools
+Version: 0.9.0
 Authors@R: 
     person("Philippe", "Peret", , "philippe.peret@hotmail.com", role = c("aut", "cre"))
 Description: The package contains various tools to make (my) life easier.

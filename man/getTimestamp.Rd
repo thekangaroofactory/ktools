@@ -4,12 +4,14 @@
 \alias{getTimestamp}
 \title{Compute timestamp}
 \usage{
-getTimestamp(k = 1000, digits = 0)
+getTimestamp(k = 1000, digits = 0, silent = FALSE)
 }
 \arguments{
 \item{k}{a numeric (default = 1000), used as a multiplication factor}
 
 \item{digits}{an integer (default = 0) passed to round() function}
+
+\item{silent}{an optional (default = FALSE) logical. If TRUE, no traces will go to the console}
 }
 \value{
 a numeric
