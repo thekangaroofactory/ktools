@@ -1,6 +1,6 @@
 
 
-#' generate a sequence of timestamps
+#' Generate a sequence of timestamps
 #'
 #' @param n an integer representing the desired output vector length (see details)
 #'

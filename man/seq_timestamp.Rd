@@ -2,7 +2,7 @@
 % Please edit documentation in R/seq_timestamp.R
 \name{seq_timestamp}
 \alias{seq_timestamp}
-\title{generate a sequence of timestamps}
+\title{Generate a sequence of timestamps}
 \usage{
 seq_timestamp(n = 2)
 }
@@ -13,7 +13,7 @@ seq_timestamp(n = 2)
 a numeric vector of timestamps
 }
 \description{
-generate a sequence of timestamps
+Generate a sequence of timestamps
 }
 \details{
 n is expected to receive an integer. If a decimal value is provided, then round()
