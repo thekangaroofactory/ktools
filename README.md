@@ -1,9 +1,11 @@
 # ktools
-R Package
 
+R Package with various utils
+
+## Code coverage
 [![codecov](https://codecov.io/gh/thekangaroofactory/ktools/graph/badge.svg?token=4YBTJ8705Z)](https://codecov.io/gh/thekangaroofactory/ktools)
 
-This is a R package with various tools.
+## Content
 
 - date_range: Compute date range
 - getNsFunction: Trick to solve the use of :: for package functions in do.call()
