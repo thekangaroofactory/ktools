@@ -3,4 +3,5 @@
 export(date_range)
 export(getNsFunction)
 export(getTimestamp)
+export(incat)
 export(seq_timestamp)
