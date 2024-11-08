@@ -29,7 +29,7 @@ getTimestamp <- function(k = 1000, digits = 0, silent = FALSE)
 
   # trace
   if(!silent)
-    cat("[getTimestamp] timestamp = ", as.character(timestamp), "\n")
+    catl("[getTimestamp] timestamp = ", as.character(timestamp))
 
   # return
   timestamp
