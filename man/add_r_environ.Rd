@@ -20,5 +20,7 @@ TRUE if success, else FALSE
 Add Variable To Renviron File
 }
 \examples{
+\dontrun{
 add_r_environ(key = "MY_VAR", value = "my_value")
+}
 }

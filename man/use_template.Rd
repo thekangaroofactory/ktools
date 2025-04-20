@@ -19,5 +19,7 @@ use_template(template, name = template, package = "ktools", path = getwd())
 Copy Template File
 }
 \examples{
+\dontrun{
 use_template(template = "global.R")
+}
 }

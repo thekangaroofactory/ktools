@@ -16,5 +16,7 @@ the output of the file.create call
 Create .Renviron File
 }
 \examples{
+\dontrun{
 use_r_environ()
+}
 }

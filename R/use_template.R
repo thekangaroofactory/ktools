@@ -9,7 +9,10 @@
 #'
 #' @export
 #'
-#' @examples use_template(template = "global.R")
+#' @examples
+#' \dontrun{
+#' use_template(template = "global.R")
+#' }
 
 use_template <- function(template, name = template, package = "ktools", path = getwd()){
 

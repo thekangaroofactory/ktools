@@ -9,7 +9,10 @@
 #' @returns TRUE if success, else FALSE
 #' @export
 #'
-#' @examples add_r_environ(key = "MY_VAR", value = "my_value")
+#' @examples
+#' \dontrun{
+#' add_r_environ(key = "MY_VAR", value = "my_value")
+#' }
 
 add_r_environ <- function(path = getwd(), key = "DEBUG", value = "TRUE"){
 

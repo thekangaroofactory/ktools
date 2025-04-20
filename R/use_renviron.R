@@ -7,7 +7,10 @@
 #' @returns the output of the file.create call
 #' @export
 #'
-#' @examples use_r_environ()
+#' @examples
+#' \dontrun{
+#' use_r_environ()
+#' }
 
 use_r_environ <- function(path = getwd()){
 

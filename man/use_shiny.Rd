@@ -24,5 +24,7 @@ use_shiny(
 Shiny App Setup
 }
 \examples{
+\dontrun{
 use_shiny()
+}
 }

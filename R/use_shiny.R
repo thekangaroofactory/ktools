@@ -9,7 +9,10 @@
 #'
 #' @export
 #'
-#' @examples use_shiny()
+#' @examples
+#' \dontrun{
+#' use_shiny()
+#' }
 
 use_shiny <- function(path = getwd(), app_dir = "app", data_dir = file.path(path, "data"), module = F){
 
