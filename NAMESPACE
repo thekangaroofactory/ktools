@@ -3,6 +3,7 @@
 export(add_r_environ)
 export(catl)
 export(copy_template)
+export(create_data)
 export(date_range)
 export(getNsFunction)
 export(getTimestamp)
