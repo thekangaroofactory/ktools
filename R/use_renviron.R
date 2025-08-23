@@ -22,7 +22,7 @@ use_r_environ <- function(path = getwd()){
   # -- create file
   res <- file.create(filename)
 
-  # -- check & write variable
+  # -- check
   if(res)
     cat("done \n")
   else
