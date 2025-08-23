@@ -4,14 +4,14 @@
 \alias{catl}
 \title{Simple Wrapper Around Cat}
 \usage{
-catl(..., level = 1, debug = getOption("k.debug"), newline = TRUE)
+catl(..., level = 1, debug = Sys.getenv("TRACE_LEVEL"), newline = TRUE)
 }
 \arguments{
 \item{...}{R objects as defined in \link[base]{cat}}
 
 \item{level}{a numeric value indicating the level of trace}
 
-\item{debug}{an optional value to indicate the level of trace to be displayed}
+\item{debug}{an optional (usually omitted) value to indicate the level of trace to be displayed}
 
 \item{newline}{a logical. If TRUE (default), new line \code{"\n"} will be added}
 }
@@ -25,9 +25,9 @@ production context (as printing output to the console or file is costly).
 
 The different levels are left flexible.
 
-By default, \code{debug} is set to \code{getOption("k.debug")}
-If the option is not set, no output will be produced (silent mode)
-When the option is set, the function will pass calls with level <= debug
+By default, \code{debug} is set to \code{Sys.getenv("TRACE_LEVEL")}
+If the environment variable is not set, no output will be produced (silent mode)
+When the variable is set, the function will pass calls with level <= debug
 to the original \link[base]{cat} function.
 }
 \examples{

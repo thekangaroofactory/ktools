@@ -4,7 +4,7 @@
 #'
 #' @param ... R objects as defined in \link[base]{cat}
 #' @param level a numeric value indicating the level of trace
-#' @param debug an optional value to indicate the level of trace to be displayed
+#' @param debug an optional (usually omitted) value to indicate the level of trace to be displayed
 #' @param newline a logical. If TRUE (default), new line \code{"\n"} will be added
 #'
 #' @description
@@ -17,9 +17,9 @@
 #'
 #' The different levels are left flexible.
 #'
-#' By default, \code{debug} is set to \code{getOption("k.debug")}
-#' If the option is not set, no output will be produced (silent mode)
-#' When the option is set, the function will pass calls with level <= debug
+#' By default, \code{debug} is set to \code{Sys.getenv("TRACE_LEVEL")}
+#' If the environment variable is not set, no output will be produced (silent mode)
+#' When the variable is set, the function will pass calls with level <= debug
 #' to the original \link[base]{cat} function.
 #'
 #' @export
@@ -31,10 +31,10 @@
 #' catl("Awesome message here", level = 1, debug = 2)
 #'
 
-catl <- function(..., level = 1, debug = getOption("k.debug"), newline = TRUE){
+catl <- function(..., level = 1, debug = Sys.getenv("TRACE_LEVEL"), newline = TRUE){
 
-  if(!is.null(debug))
-    if(level <= debug)
+  if(debug != "")
+    if(level <= as.numeric(debug))
       base::cat(c(..., ifelse(newline, "\n", "")))
 
 }
