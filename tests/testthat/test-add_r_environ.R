@@ -13,7 +13,7 @@ test_that("add_r_environ works", {
   clean_all(testdata_path)
 
   # -- negatove test
-  expect_warning(x <- add_r_environ(path = testdata_path))
+  expect_warning(x <- add_r_environ(path = "/"))
   expect_false(x)
 
 })
