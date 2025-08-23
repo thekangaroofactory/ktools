@@ -23,6 +23,10 @@ use_shiny(
 \description{
 Shiny App Setup
 }
+\details{
+When data_dir is null, data folder will be ignored and DATA_HOME environment
+variable will not be set.
+}
 \examples{
 \dontrun{
 use_shiny()
