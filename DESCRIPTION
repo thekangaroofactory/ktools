@@ -8,7 +8,7 @@ Authors@R:
            comment = c(ORCID = "0009-0003-9666-7490"),
            email = "philippe.peret@hotmail.com")
 Description: Various tools to make (my) life easier.
-License: GPL-3
+License: GPL (>= 3) + file LICENSE
 URL: https://github.com/thekangaroofactory/ktools
 BugReports: https://github.com/thekangaroofactory/ktools/issues
 Depends:
