@@ -8,7 +8,7 @@ Authors@R:
            comment = c(ORCID = "0009-0003-9666-7490"),
            email = "philippe.peret@hotmail.com")
 Description: Various tools to make (my) life easier.
-License: GPL-3
+License: GPL (>= 3) + file LICENSE
 URL: https://github.com/thekangaroofactory/ktools
 BugReports: https://github.com/thekangaroofactory/ktools/issues
 Depends:
@@ -17,7 +17,7 @@ Imports:
     lubridate
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3

@@ -9,6 +9,11 @@
 #'
 #' @export
 #'
+#' @details
+#' When data_dir is null, data folder will be ignored and DATA_HOME environment
+#' variable will not be set.
+#'
+#'
 #' @examples
 #' \dontrun{
 #' use_shiny()
@@ -29,7 +34,9 @@ use_shiny <- function(path = getwd(), app_dir = "app", data_dir = file.path(path
   # -- Add variables
   add_r_environ()
   add_r_environ(key = "PROJECT_HOME", value = path)
-  add_r_environ(key = "DATA_HOME", value = data_dir)
+
+  if(!is.null(data_dir))
+    add_r_environ(key = "DATA_HOME", value = data_dir)
 
 
 
@@ -65,13 +72,16 @@ use_shiny <- function(path = getwd(), app_dir = "app", data_dir = file.path(path
   # Data
   # ----------------------------------------------------------------------------
 
-  # -- Create data folder
-  if(!dir.exists(data_dir)){
+  # -- check parameter
+  if(!is.null(data_dir))
 
-    cat("- Create data folder:", data_dir, "\n")
-    dir.create(data_dir)
+    # -- Create data folder
+    if(!dir.exists(data_dir)){
 
-  } else cat("- Data folder:", data_dir, "already exists. \n")
+      cat("- Create data folder:", data_dir, "\n")
+      dir.create(data_dir)
+
+    } else cat("- Data folder:", data_dir, "already exists. \n")
 
 
 }
