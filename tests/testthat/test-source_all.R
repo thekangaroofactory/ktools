@@ -1,12 +1,12 @@
 
 
-test_that("source_all works", {
+test_that("source_code works", {
 
   # -- capture env functions before
   x_before <- lsf.str()
 
   # -- call function
-  x <- source_all(path = "./R")
+  x <- source_code(path = "./R")
 
   # -- capture env functions after
   x_after <- lsf.str()

@@ -1,9 +1,9 @@
 
 
-#' Source All Code
+#' Source Code
 #'
 #' @param path a character vector of the path to explore
-#' @param verbose a logical value (default = TRUE). If FALSE, then minimal trace will be sent to the console
+#' @param verbose a logical value (default = FALSE). If TRUE, then details about sourced files will be sent to the console
 #'
 #' @return an integer of how many functions have been attached to the environment
 #' @export
@@ -14,17 +14,19 @@
 #'
 #' @examples
 #' \dontrun{
-#' source_all("./R")
+#' source_code("./R")
 #' }
 
 
-source_all <- function(path, verbose = TRUE){
+source_code <- function(path, verbose = FALSE){
 
   # -- env snapshot
   env_before <- utils::lsf.str()
 
-  # -- Source modules & scripts
-  cat("Source code... \n")
+  if(verbose)
+    cat("Source code... \n")
+
+  # -- Source files
   for (nm in list.files(path, pattern = "*.R", full.names = TRUE, recursive = TRUE, include.dirs = FALSE))
   {
     if(verbose)
@@ -35,10 +37,9 @@ source_all <- function(path, verbose = TRUE){
   # -- env snapshot
   env_after <- utils::lsf.str()
 
-  # -- notify
-  cat(length(env_after) - length(env_before), "functions haved been attached to the environment. \n")
-
-  # -- return
-  length(env_after) - length(env_before)
+  # -- notify & return
+  nb_attached <- length(env_after) - length(env_before)
+  message(nb_attached, " function(s) haved been attached to the environment. \n")
+  nb_attached
 
 }
