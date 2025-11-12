@@ -24,16 +24,17 @@ date_range <- function(min, max, type = "this_year"){
     ceiling_year <- lubridate::ceiling_date(Sys.Date(), unit = "year") - 1
 
     # -- slice input range
-    if(min < floor_year)
-      min <- floor_year
+    start <- if(min < floor_year) floor_year else min
+    end <- if(max > ceiling_year) ceiling_year else max
 
-    if(max > ceiling_year)
-      max <- ceiling_year
+    # -- when end < this year
+    # pick start of end's year
+    if(start > end)
+      start <- lubridate::floor_date(end, unit = "year")
 
-    # -- when max < this year
-    # pick start of max's year
-    if(min > max)
-      min <- lubridate::floor_date(max, unit = "year")
+    # -- when start < min
+    # pick min
+    start <- min
 
   }
 
