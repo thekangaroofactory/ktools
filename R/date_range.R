@@ -6,7 +6,7 @@
 #' @param max a Date for the higher value
 #' @param type an optional character vector, to set the strategy (default = "this_year")
 #'
-#' @return a Date vector c(min, max)
+#' @return a Date vector c(start, end)
 #' @export
 #'
 #' @examples
@@ -23,6 +23,12 @@ date_range <- function(min, max, type = "this_year"){
     floor_year <- lubridate::floor_date(Sys.Date(), unit = "year")
     ceiling_year <- lubridate::ceiling_date(Sys.Date(), unit = "year") - 1
 
+    # -- check
+    # when current year is not in the date range
+    if(floor_year < min && ceiling_year > max){
+      floor_year <- lubridate::floor_date(min, unit = "year")
+      ceiling_year <- lubridate::ceiling_date(max, unit = "year") - 1}
+
     # -- slice input range
     start <- if(min < floor_year) floor_year else min
     end <- if(max > ceiling_year) ceiling_year else max
@@ -34,11 +40,12 @@ date_range <- function(min, max, type = "this_year"){
 
     # -- when start < min
     # pick min
-    start <- min
+    if(start < min)
+      start <- min
 
   }
 
   # -- return
-  c(min, max)
+  c(start, end)
 
 }

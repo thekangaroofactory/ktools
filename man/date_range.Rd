@@ -14,7 +14,7 @@ date_range(min, max, type = "this_year")
 \item{type}{an optional character vector, to set the strategy (default = "this_year")}
 }
 \value{
-a Date vector c(min, max)
+a Date vector c(start, end)
 }
 \description{
 Compute date range
