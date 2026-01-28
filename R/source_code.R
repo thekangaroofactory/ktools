@@ -21,7 +21,7 @@
 source_code <- function(path, verbose = FALSE){
 
   # -- env snapshot
-  env_before <- utils::lsf.str()
+  env_before <- utils::lsf.str(envir = globalenv())
 
   if(verbose)
     cat("Source code... \n")
@@ -35,11 +35,10 @@ source_code <- function(path, verbose = FALSE){
   }
 
   # -- env snapshot
-  env_after <- utils::lsf.str()
+  env_after <- utils::lsf.str(envir = globalenv())
 
   # -- notify & return
   nb_attached <- length(env_after) - length(env_before)
   message(nb_attached, " function(s) haved been attached to the environment. \n")
-  nb_attached
 
 }
