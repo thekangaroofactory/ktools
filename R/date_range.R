@@ -34,11 +34,12 @@ date_range <- function(min, max, type = "this_year"){
 
     # -- when start < min
     # pick min
-    start <- min
+    if(start < min)
+      start <- min
 
   }
 
   # -- return
-  c(min, max)
+  c(start, end)
 
 }
