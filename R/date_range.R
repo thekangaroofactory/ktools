@@ -6,7 +6,7 @@
 #' @param max a Date for the higher value
 #' @param type an optional character vector, to set the strategy (default = "this_year")
 #'
-#' @return a Date vector c(min, max)
+#' @return a Date vector c(start, end)
 #' @export
 #'
 #' @examples
