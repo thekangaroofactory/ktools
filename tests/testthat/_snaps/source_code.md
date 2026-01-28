@@ -5,8 +5,6 @@
     Message
       0 function(s) haved been attached to the environment. 
       
-    Output
-      [1] 0
 
 ---
 
@@ -17,6 +15,4 @@
     Message
       0 function(s) haved been attached to the environment. 
       
-    Output
-      [1] 0
 
