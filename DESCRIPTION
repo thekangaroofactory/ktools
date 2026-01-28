@@ -1,6 +1,6 @@
 Package: ktools
 Title: Utility Tools
-Version: 0.9.5
+Version: 0.9.6
 Authors@R: 
     person(given = "philippe",
            family = "peret",
