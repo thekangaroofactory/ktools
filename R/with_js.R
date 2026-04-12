@@ -27,21 +27,22 @@
 with_js <- function(package, src, script ,session = shiny::getDefaultReactiveDomain()){
 
   # -- compute object name in userData (as package_script)
-  name <- paste(package, tools::file_path_sans_ext(basename(script)), sep = "_")
+  asset_name <- tools::file_path_sans_ext(basename(script))
+  env_name <- paste(package, asset_name, sep = "_")
 
-  if(is.null(session$userData[[name]])){
+  if(is.null(session$userData[[env_name]])){
 
     # -- insert JS code on client side
     shiny::insertUI(selector = "head",
                     where = "beforeEnd",
-                    ui = htmltools::htmlDependency(name = paste(package, src, sep = "-"), version = utils::packageVersion(package),
+                    ui = htmltools::htmlDependency(name = paste(package, asset_name, sep = "-"), version = utils::packageVersion(package),
                                                    package = package,
                                                    src = src,
                                                    script = script),
                     immediate = TRUE)
 
     # -- log it in memory
-    session$userData[[name]] <- TRUE
+    session$userData[[env_name]] <- TRUE
 
   }
 
