@@ -37,7 +37,8 @@ with_js <- function(package, src, script ,session = shiny::getDefaultReactiveDom
                     ui = htmltools::htmlDependency(name = paste(package, src, collapse = "-"), version = utils::packageVersion(package),
                                                    package = package,
                                                    src = src,
-                                                   script = script))
+                                                   script = script),
+                    immediate = TRUE)
 
     # -- log it in memory
     session$userData[[name]] <- TRUE
