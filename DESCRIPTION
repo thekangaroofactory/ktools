@@ -14,7 +14,9 @@ BugReports: https://github.com/thekangaroofactory/ktools/issues
 Depends:
     R (>= 3.5.0)
 Imports:
-    lubridate
+    lubridate,
+    htmltools,
+    shiny
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
