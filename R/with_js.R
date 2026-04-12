@@ -11,6 +11,12 @@
 #' @param src where to find the script (see htmltools::htmlDependency() for details)
 #' @param script the script to include (relative to src)
 #'
+#' @details
+#' When `session` is NULL, the function will return without doing anything.
+#' This is useful when the function is called from ui side. The JavaScript
+#' dependency will be attached next time the function is called from server side.
+#' This is because the session$userData object cannot be updated from ui side.
+#'
 #' @importFrom shiny insertUI
 #' @importFrom shiny getDefaultReactiveDomain
 #' @importFrom htmltools htmlDependency
@@ -24,7 +30,11 @@
 #' session = shiny::getDefaultReactiveDomain())
 #' }
 
-with_js <- function(package, src, script ,session = shiny::getDefaultReactiveDomain()){
+with_js <- function(package, src, script, session = shiny::getDefaultReactiveDomain()){
+
+  # -- call from ui side
+  if(is.null(session))
+    return()
 
   # -- compute object name in userData (as package_script)
   asset_name <- tools::file_path_sans_ext(basename(script))
