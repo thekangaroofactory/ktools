@@ -34,7 +34,7 @@ with_js <- function(package, src, script ,session = shiny::getDefaultReactiveDom
     # -- insert JS code on client side
     shiny::insertUI(selector = "head",
                     where = "beforeEnd",
-                    ui = htmltools::htmlDependency(name = paste(package, src, collapse = "-"), version = utils::packageVersion(package),
+                    ui = htmltools::htmlDependency(name = paste(package, src, sep = "-"), version = utils::packageVersion(package),
                                                    package = package,
                                                    src = src,
                                                    script = script),
