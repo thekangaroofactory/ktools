@@ -36,6 +36,10 @@ with_js <- function(package, src, script, session = shiny::getDefaultReactiveDom
   if(is.null(session))
     return()
 
+  # -- secure against missing package
+  if(!package %in% rownames(installed.packages()))
+    stop(paste("Package", package, "is not found."))
+
   # -- compute object name in userData (as package_script)
   asset_name <- tools::file_path_sans_ext(basename(script))
   env_name <- paste(package, asset_name, sep = "_")
