@@ -27,7 +27,7 @@
 with_js <- function(package, src, script ,session = shiny::getDefaultReactiveDomain()){
 
   # -- compute object name in userData (as package_script)
-  name <- paste(package, tools::file_path_sans_ext(basename(script)), collapse = "_")
+  name <- paste(package, tools::file_path_sans_ext(basename(script)), sep = "_")
 
   if(is.null(session$userData[[name]])){
 
