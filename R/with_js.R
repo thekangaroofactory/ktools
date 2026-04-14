@@ -21,6 +21,7 @@
 #' @importFrom shiny getDefaultReactiveDomain
 #' @importFrom htmltools htmlDependency
 #' @importFrom utils packageVersion
+#' @importFrom utils installed.packages
 #'
 #' @export
 #'
