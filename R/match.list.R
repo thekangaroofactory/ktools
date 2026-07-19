@@ -22,6 +22,10 @@
 
 match.list <- function(x, reference){
 
+  # -- secure against NULL
+  if(is.null(x))
+    return(reference)
+
   # -- check inputs
   stopifnot("x argument must be a list" = is.list(x))
   stopifnot("reference argument must be a list" = is.list(reference))
