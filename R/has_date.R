@@ -10,8 +10,8 @@
 #'
 #' @examples
 #' has_date(data.frame(date = Sys.Date()))
-#' has_date(data.frame(date = Sys.Date(), update = Sys.Date()), single = F)
-#' has_date(data.frame(date = Sys.Date(), update = Sys.Date()), single = T)
+#' has_date(data.frame(date = Sys.Date(), update = Sys.Date()), single = FALSE)
+#' has_date(data.frame(date = Sys.Date(), update = Sys.Date()), single = TRUE)
 
 has_date <- function(x, single = TRUE){
 

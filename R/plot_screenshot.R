@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-#' \notrun{
+#' \dontrun{
 #' screenshot_start(height = 5, width = 10, dpi = 350)
 #' }
 
@@ -35,7 +35,7 @@ screenshot_start <- function(height = NULL, width = NULL, dpi = 300){
 #' @export
 #'
 #' @examples
-#' \notrun{
+#' \dontrun{
 #' screenshot_stop(first = 1, last = 1, frame = 0.25, loop = TRUE, background = "none")
 #' }
 
