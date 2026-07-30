@@ -9,7 +9,7 @@ Authors@R:
            email = "philippe.peret@hotmail.com")
 Description: Various tools to make (my) life easier.
 License: GPL (>= 3) + file LICENSE
-URL: https://github.com/thekangaroofactory/ktools
+URL: https://thekangaroofactory.github.io/ktools/
 BugReports: https://github.com/thekangaroofactory/ktools/issues
 Depends:
     R (>= 4.1.0)
