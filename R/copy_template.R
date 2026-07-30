@@ -14,14 +14,13 @@
 
 copy_template <- function(template, path = getwd(), filename = NULL){
 
-  cat("Copy template:", template, "to destination path =", path, "\n")
+  cat("Copy template to destination path =", path, "\n")
 
   # -- get template file
   target <- system.file(template, package = "ktools")
 
-  if(target == ""){
-    cat("[Warning] template file is not found!")
-    return(FALSE)}
+  if(target == "")
+    stop("Template file is not found in the package!", call. = F)
 
   if(is.null(rename))
     filename <- gsub("template_", "", template)
