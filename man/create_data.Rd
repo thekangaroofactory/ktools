@@ -20,6 +20,5 @@ Create Data
 If NA is given as input for colClasses, then read.table() will return an empty data.frame (0 obs. of 0 variables)
 }
 \examples{
-create_data(colClasses = c("id" = "numeric", "date" = "Date", "comment" = "character"))
-
+create_data(colClasses = c(id = "numeric", date = "Date", comment = "character"))
 }

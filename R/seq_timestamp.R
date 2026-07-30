@@ -12,10 +12,13 @@
 #' will be used, which means that 2.8 will return a length 3 vector.
 #'
 #' @examples
-#' seq_timestamp(n = 2)
+#' \notrun{
+#' seq_timestamp(n = 2)}
 
 
 seq_timestamp <- function(n = 2){
+
+  .Deprecated(new = "replicate(10, uuid())")
 
   # -- test if arg is an integer
   if(n %% 1 != 0)

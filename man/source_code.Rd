@@ -9,10 +9,11 @@ source_code(path, verbose = FALSE)
 \arguments{
 \item{path}{a character vector of the path to explore}
 
-\item{verbose}{a logical value (default = FALSE). If TRUE, then details about sourced files will be sent to the console}
+\item{verbose}{a logical value (default = FALSE). If TRUE, then details
+about sourced files will be sent to the console}
 }
 \value{
-an integer of how many functions have been attached to the environment
+an integer, how many functions have been attached to the environment
 }
 \description{
 Source Code

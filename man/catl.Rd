@@ -29,6 +29,8 @@ By default, \code{debug} is set to \code{Sys.getenv("TRACE_LEVEL")}
 If the environment variable is not set, no output will be produced (silent mode)
 When the variable is set, the function will pass calls with level <= debug
 to the original \link[base]{cat} function.
+
+The \link[ktools]{trace_level} function can be used to activate a specific trace level.
 }
 \examples{
 catl("Awesome message here")

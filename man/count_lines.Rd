@@ -4,10 +4,10 @@
 \alias{count_lines}
 \title{Count Lines}
 \usage{
-count_lines(p, verbose = FALSE)
+count_lines(con, verbose = FALSE)
 }
 \arguments{
-\item{p}{a connection object or a character string (will be passed to readLines())}
+\item{con}{a connection object or a character string (will be passed to \link[base]{readLines})}
 
 \item{verbose}{a logical (FALSE by default) if counts should be printed to the console}
 }

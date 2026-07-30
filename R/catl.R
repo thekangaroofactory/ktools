@@ -22,6 +22,8 @@
 #' When the variable is set, the function will pass calls with level <= debug
 #' to the original \link[base]{cat} function.
 #'
+#' The \link[ktools]{trace_level} function can be used to activate a specific trace level.
+#'
 #' @export
 #'
 #' @examples

@@ -17,6 +17,8 @@
 
 incat <- function(x, sep = ""){
 
+  lifecycle::signal_stage("experimental", "incat()")
+
   # -- test direct call
   isDirect <- length(sys.calls()) == 1
 

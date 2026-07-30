@@ -3,9 +3,10 @@
 #' Source Code
 #'
 #' @param path a character vector of the path to explore
-#' @param verbose a logical value (default = FALSE). If TRUE, then details about sourced files will be sent to the console
+#' @param verbose a logical value (default = FALSE). If TRUE, then details
+#' about sourced files will be sent to the console
 #'
-#' @return an integer of how many functions have been attached to the environment
+#' @return an integer, how many functions have been attached to the environment
 #' @export
 #'
 #' @details

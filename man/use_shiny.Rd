@@ -4,19 +4,14 @@
 \alias{use_shiny}
 \title{Shiny App Setup}
 \usage{
-use_shiny(
-  path = getwd(),
-  app_dir = "app",
-  data_dir = file.path(path, "data"),
-  module = F
-)
+use_shiny(path = getwd(), app_dir = "shinyapp", data_dir = NULL, module = F)
 }
 \arguments{
-\item{path}{the path where to setup the Shiny app (default: working directory)}
+\item{path}{the path where to setup the Shiny app (default = working directory)}
 
-\item{app_dir}{the name of the app folder (default: "app")}
+\item{app_dir}{the name of the app folder (default = "shinyapp")}
 
-\item{data_dir}{the path of the data folder (default: "data" folder inside path)}
+\item{data_dir}{the path of the data (if any)}
 
 \item{module}{if a Shiny module should be created or not (default: FALSE)}
 }
@@ -24,8 +19,7 @@ use_shiny(
 Shiny App Setup
 }
 \details{
-When data_dir is null, data folder will be ignored and DATA_HOME environment
-variable will not be set.
+When data_dir is null, DATA_HOME environment variable will not be set.
 }
 \examples{
 \dontrun{

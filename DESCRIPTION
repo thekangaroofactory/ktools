@@ -7,13 +7,14 @@ Authors@R:
            role = c("aut", "cre"),
            comment = c(ORCID = "0009-0003-9666-7490"),
            email = "philippe.peret@hotmail.com")
-Description: Various tools to make (my) life easier.
+Description: Various utility tools to make (my) life easier.
 License: GPL (>= 3) + file LICENSE
 URL: https://thekangaroofactory.github.io/ktools/
 BugReports: https://github.com/thekangaroofactory/ktools/issues
 Depends:
     R (>= 4.1.0)
 Imports:
+    lifecycle,
     dplyr,
     lubridate,
     htmltools,

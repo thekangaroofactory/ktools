@@ -2,7 +2,7 @@
 % Please edit documentation in R/getTimestamp.R
 \name{getTimestamp}
 \alias{getTimestamp}
-\title{Compute timestamp}
+\title{Compute Timestamp}
 \usage{
 getTimestamp(k = 1000, digits = 0, silent = FALSE)
 }
@@ -20,11 +20,14 @@ a numeric
 Compute a numeric timestamp to be used as UUID.
 }
 \examples{
-## compute up to the second timestamp
+# compute up to the second timestamp
 getTimestamp(k = 1, digits = 0)
 
-## compute up to the millisecond timestamp
+# compute up to the millisecond timestamp
 getTimestamp(k = 1000)
 getTimestamp()
 
+}
+\seealso{
+\code{\link[=uuid]{uuid()}}
 }

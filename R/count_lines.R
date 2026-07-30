@@ -2,7 +2,7 @@
 
 #' Count Lines
 #'
-#' @param p a connection object or a character string (will be passed to readLines())
+#' @param con a connection object or a character string (will be passed to \link[base]{readLines})
 #' @param verbose a logical (FALSE by default) if counts should be printed to the console
 #'
 #' @returns a named vector
@@ -19,10 +19,10 @@
 #' writeLines(lines, infile)
 #' count_lines(infile)
 
-count_lines <- function(p, verbose = FALSE) {
+count_lines <- function(con, verbose = FALSE) {
 
   # -- read
-  l = readLines(p)
+  l = readLines(con)
 
   # ----------------------------------------------------------------------------
   # Total lines
