@@ -2,22 +2,23 @@
 
 #' Indented Cat
 #'
+#' `r lifecycle::badge("experimental")`
+#'
 #' @param x R objects (see cat function for details)
 #' @param sep a character vector of strings to append after each element (default is "").
 #'
 #' @export
+#' @return None (invisible NULL)
 #'
 #' @details
 #' When the function detects a direct call (i.e. not from another function), then it basically just do cat
 #' otherwise it finds the calling function name and print indented output based on callstack position.
 #'
 #' @examples
-#' incat("this message")
+#' incat("This message")
 
 
 incat <- function(x, sep = ""){
-
-  lifecycle::signal_stage("experimental", "incat()")
 
   # -- test direct call
   isDirect <- length(sys.calls()) == 1
