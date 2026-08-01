@@ -3,7 +3,7 @@
 #' Match Lists
 #'
 #' @description
-#' Matches a named list against the one provided as a reference.
+#' Matches a named list against a reference.
 #'
 #' @param x a named list to check.
 #' @param reference a named list to use as a reference.
@@ -14,7 +14,7 @@
 #'
 #' It will also check that elements in `x` have same classes as matching element in `reference`.
 #'
-#' @returns a list
+#' @returns a matched list
 #' @export
 #'
 #' @examples

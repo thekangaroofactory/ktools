@@ -12,10 +12,10 @@ match.list(x, reference)
 \item{reference}{a named list to use as a reference.}
 }
 \value{
-a list
+a matched list
 }
 \description{
-Matches a named list against the one provided as a reference.
+Matches a named list against a reference.
 }
 \details{
 The function will drop any element from \code{x} that does not fit with a name
