@@ -16,7 +16,7 @@ about sourced files will be sent to the console}
 an integer, how many functions have been attached to the environment
 }
 \description{
-Source Code
+Source all files from a given path.
 }
 \details{
 Given path is explored using list.files with "*.R" pattern, and recursive = TRUE

@@ -2,6 +2,9 @@
 
 #' Source Code
 #'
+#' @description
+#' Source all files from a given path.
+#'
 #' @param path a character vector of the path to explore
 #' @param verbose a logical value (default = FALSE). If TRUE, then details
 #' about sourced files will be sent to the console
