@@ -13,9 +13,12 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{
+#'
+#' # function expecting a list as argument
+#' foo <- function(options = list(a = 1, b = 2)){}
+#'
+#' # match user input
 #' match.option(foo, "options", list(a = 1))
-#' }
 
 match.option <- function(fun, arg, value){
 

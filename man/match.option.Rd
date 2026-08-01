@@ -20,7 +20,10 @@ The list of options, including missing ones
 matches a named list against the one expected in function arguments
 }
 \examples{
-\dontrun{
+
+# function expecting a list as argument
+foo <- function(options = list(a = 1, b = 2)){}
+
+# match user input
 match.option(foo, "options", list(a = 1))
-}
 }
