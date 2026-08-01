@@ -9,6 +9,11 @@
 #' @param digits an integer (default = 0) passed to round() function
 #' @param silent an optional (default = FALSE) logical. If TRUE, no traces will go to the console
 #'
+#' @details
+#' The function returns a unique numeric up to the millisecond.
+#' Output should not be used as a unique id if users / systems may call it more than
+#' one time per millisecond.
+#'
 #' @return a numeric
 #' @export
 #'
