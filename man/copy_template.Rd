@@ -4,7 +4,7 @@
 \alias{copy_template}
 \title{Copy Package Template Files}
 \usage{
-copy_template(template, path = getwd(), filename = NULL)
+copy_template(template, pkg = "ktools", path = getwd(), filename = NULL)
 }
 \arguments{
 \item{template}{the name of the template file to be copied}
@@ -12,6 +12,8 @@ copy_template(template, path = getwd(), filename = NULL)
 \item{path}{destination path where to copy the template}
 
 \item{filename}{the name of the copy}
+
+\item{package}{the name of the package where to find the template (default = ktools)}
 }
 \value{
 the output of the file.copy function call
