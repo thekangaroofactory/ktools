@@ -28,5 +28,7 @@ without the "template_" prefix pattern.
 An error will be thrown if the template file is not found.
 }
 \examples{
-copy_template(template = "template_shiny_server", path = "shinyapp", filename = "my_server.R")
+\dontrun{
+copy_template(template = "template_shiny_server.R", path = "shinyapp", filename = "my_server.R")
+}
 }

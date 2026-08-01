@@ -17,11 +17,11 @@
 #' @export
 #'
 #' @examples
-#' copy_template(template = "template_shiny_server", path = "shinyapp", filename = "my_server.R")
+#' \dontrun{
+#' copy_template(template = "template_shiny_server.R", path = "shinyapp", filename = "my_server.R")
+#' }
 
 copy_template <- function(template, pkg = "ktools", path = getwd(), filename = NULL){
-
-  cat("Copy template to destination path =", path, "\n")
 
   # -- get template file
   target <- system.file(template, package = "ktools")
@@ -33,6 +33,7 @@ copy_template <- function(template, pkg = "ktools", path = getwd(), filename = N
     filename <- gsub("template_", "", template)
 
   # -- copy to destination path & return
+  cat("Copy template to destination path =", path, "\n")
   file.copy(from = target, to = file.path(path, filename))
 
 }
