@@ -1,6 +1,11 @@
 
 
-#' Shiny App Setup
+#' Setup Shiny App
+#'
+#'`r lifecycle::badge("experimental")`
+#'
+#' @description
+#' The function is used to setup a Shiny App with optional module based on templates.
 #'
 #' @param path the path where to setup the Shiny app (default = working directory)
 #' @param app_dir the name of the app folder (default = "shinyapp")
@@ -8,6 +13,7 @@
 #' @param module if a Shiny module should be created or not (default: FALSE)
 #'
 #' @export
+#' @return NULL (invisibly)
 #'
 #' @details
 #' When data_dir is null, DATA_HOME environment variable will not be set.
@@ -63,5 +69,8 @@ use_shiny <- function(path = getwd(), app_dir = "shinyapp", data_dir = NULL, mod
     dir.create(file.path(path, app_dir, "R", "module"))
     use_template(template = "template_shiny_module_server.R", name = "module_server.R", path = file.path(path, app_dir, "R", "module"))
     use_template(template = "template_shiny_module_ui.R", name = "module_ui.R", path = file.path(path, app_dir, "R", "module"))}
+
+  #
+  invisible(NULL)
 
 }

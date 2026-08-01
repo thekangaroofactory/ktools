@@ -2,7 +2,7 @@
 % Please edit documentation in R/use_shiny.R
 \name{use_shiny}
 \alias{use_shiny}
-\title{Shiny App Setup}
+\title{Setup Shiny App}
 \usage{
 use_shiny(path = getwd(), app_dir = "shinyapp", data_dir = NULL, module = F)
 }
@@ -15,10 +15,15 @@ use_shiny(path = getwd(), app_dir = "shinyapp", data_dir = NULL, module = F)
 
 \item{module}{if a Shiny module should be created or not (default: FALSE)}
 }
+\value{
+NULL (invisibly)
+}
 \description{
-Shiny App Setup
+The function is used to setup a Shiny App with optional module based on templates.
 }
 \details{
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
+
 When data_dir is null, DATA_HOME environment variable will not be set.
 }
 \examples{
