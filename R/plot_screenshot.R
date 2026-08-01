@@ -17,6 +17,7 @@
 #' will throw a warning and exit with NULL.
 #'
 #' @export
+#' @return NULL
 #'
 #' @examples
 #' \dontrun{
@@ -35,6 +36,9 @@ screenshot_start <- function(height = NULL, width = NULL, dpi = 300){
 
   ## -- resize canvas of the last plot (and all next)
   camcorder::gg_resize_film(height = height, width = width, dpi = dpi)
+
+  # -- return
+  NULL
 
 }
 
@@ -59,6 +63,7 @@ screenshot_start <- function(height = NULL, width = NULL, dpi = 300){
 #' will throw a warning and exit with NULL.
 #'
 #' @export
+#' @return nothing. Used for side effect.
 #'
 #' @examples
 #' \dontrun{

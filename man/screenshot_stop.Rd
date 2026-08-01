@@ -23,6 +23,9 @@ screenshot_stop(
 
 \item{background}{character string for the background color}
 }
+\value{
+nothing. Used for side effect.
+}
 \description{
 This is a wrapper function to stop plot viewer recording and build a gif
 from the captures.
