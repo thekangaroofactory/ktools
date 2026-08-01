@@ -2,6 +2,11 @@
 
 #' Compute date range
 #'
+#' `r lifecycle::badge('deprecated')`
+#'
+#' @description
+#' Compute specific date range between two dates.
+#'
 #' @param min a Date for the lower value
 #' @param max a Date for the higher value
 #' @param type an optional character vector, to set the strategy (default = "this_year")
@@ -14,6 +19,8 @@
 
 
 date_range <- function(min, max, type = "this_year"){
+
+  .Deprecated(new = "Use filter_date() instead")
 
   # -- test type
   if(type == "this_year"){
