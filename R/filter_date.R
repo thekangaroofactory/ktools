@@ -8,7 +8,7 @@
 #' @param x a data.frame with a Date or POSIXct column
 #' @param colname an optional character string to provide the name of the column to use in filter
 #' @param ref an optional Date value to be used as a reference for the date range
-#' @param unit a string to compute the date range (default = "month") (see \link[lubridate::round_date()])
+#' @param unit a string to compute the date range (default = "month") (see \link[lubridate]{round_date})
 #'
 #' @details
 #' The purpose of this function is to make data navigation between date range easier.
