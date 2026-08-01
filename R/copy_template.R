@@ -4,13 +4,13 @@
 #'
 #' @param template the name of the template file to be copied
 #' @param path destination path where to copy the template
-#' @param rename the name of the copy
+#' @param filename the name of the copy
 #'
 #' @returns the output of the file.copy function call
 #' @export
 #'
 #' @examples
-#' copy_template(template = "template_shiny_server", path = "shinyapp", rename = TRUE)
+#' copy_template(template = "template_shiny_server", path = "shinyapp", filename = "my_server.R")
 
 copy_template <- function(template, path = getwd(), filename = NULL){
 
@@ -22,10 +22,10 @@ copy_template <- function(template, path = getwd(), filename = NULL){
   if(target == "")
     stop("Template file is not found in the package!", call. = F)
 
-  if(is.null(rename))
+  if(is.null(filename))
     filename <- gsub("template_", "", template)
 
   # -- copy to destination path (+ return output value)
-  file.copy(from = target, to = filet.path(path, filename))
+  file.copy(from = target, to = file.path(path, filename))
 
 }

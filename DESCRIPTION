@@ -7,8 +7,7 @@ Authors@R:
            role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0009-0003-9666-7490"),
            email = "philippe.peret@hotmail.com")
-Description: Various utility tools to make (my) life easier. ktools is primarily 
-designed to host functions shared by various other packages and projects.
+Description: Various utility tools to make (my) life easier. ktools is primarily designed to host functions shared by various other packages and projects.
 License: GPL (>= 3) + file LICENSE
 URL: https://thekangaroofactory.github.io/ktools/
 BugReports: https://github.com/thekangaroofactory/ktools/issues

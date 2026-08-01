@@ -12,7 +12,7 @@
 #' will be used, which means that 2.8 will return a length 3 vector.
 #'
 #' @examples
-#' \notrun{
+#' \dontrun{
 #' seq_timestamp(n = 2)}
 
 
