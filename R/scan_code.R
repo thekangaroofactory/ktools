@@ -13,7 +13,8 @@
 #' @seealso [count_lines()]
 #'
 #' @examples
-#' scan_code()
+#' \dontrun{
+#' scan_code()}
 
 scan_code <- function(path = getwd()){
 

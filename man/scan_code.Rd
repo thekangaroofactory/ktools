@@ -16,7 +16,8 @@ a data.frame with counts for the scanned files
 Generates a code report for a given path.
 }
 \examples{
-scan_code()
+\dontrun{
+scan_code()}
 }
 \seealso{
 \code{\link[=count_lines]{count_lines()}}

@@ -28,3 +28,6 @@ lines <- "#' This\n#'\n\n# comment\np <- 1\n\nif(p==1) print(p)\n"
 writeLines(lines, infile)
 count_lines(infile)
 }
+\seealso{
+\code{\link[=scan_code]{scan_code()}}
+}

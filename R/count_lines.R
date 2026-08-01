@@ -14,6 +14,8 @@
 #' @details
 #' Code lines ending with a comment are counted as code lines (hence ignored from comments).
 #'
+#' @seealso [scan_code()]
+#'
 #' @examples
 #' infile <- tempfile()
 #'
