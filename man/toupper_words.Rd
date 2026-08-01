@@ -9,7 +9,7 @@ toupper_words(s, strict = FALSE)
 \arguments{
 \item{s}{a character string}
 
-\item{strict}{a logical to indicate if other characters should be forced to lower}
+\item{strict}{a logical (default = FALSE) if other characters should be forced to lower}
 }
 \value{
 a character string

@@ -3,7 +3,7 @@
 #' Capitalize First Letters
 #'
 #' @param s a character string
-#' @param strict a logical to indicate if other characters should be forced to lower
+#' @param strict a logical (default = FALSE) if other characters should be forced to lower
 #'
 #' @returns a character string
 #' @export
