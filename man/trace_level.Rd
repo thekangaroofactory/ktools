@@ -7,14 +7,23 @@
 trace_level(level = NULL)
 }
 \arguments{
-\item{level}{an integer to indicate the level of trace printed by
-\link[ktools]{catl} function, 0 to set the trace OFF or NULL to get
-the current trace level.}
+\item{level}{an integer (or NULL)}
+}
+\value{
+Nothing or the active trace level.
 }
 \description{
-Set Trace Level
+A helper function to set the trace level that will be printed by
+\link[ktools]{catl}
+}
+\details{
+\code{level} is used to define the level of trace printed by \link[ktools]{catl}
+Use 0 to set the trace OFF or NULL to get the current trace level.
 }
 \examples{
 trace_level()
 trace_level(2)
+}
+\seealso{
+\code{\link[=catl]{catl()}}
 }
