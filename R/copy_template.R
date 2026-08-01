@@ -3,9 +3,15 @@
 #' Copy Package Template Files
 #'
 #' @param template the name of the template file to be copied
-#' @param package the name of the package where to find the template (default = ktools)
-#' @param path destination path where to copy the template
-#' @param filename the name of the copy
+#' @param pkg the name of the package where to find the template (default = ktools)
+#' @param path destination path where to copy the template (default = working directory)
+#' @param filename the name of the copy (optional)
+#'
+#' @details
+#' When `filename` is not provided, the copy will have same name as the template
+#' without the "template_" prefix pattern.
+#'
+#' An error will be thrown if the template file is not found.
 #'
 #' @returns the output of the file.copy function call
 #' @export
