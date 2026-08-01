@@ -13,7 +13,7 @@ seq_timestamp(n = 2)
 a numeric vector of timestamps
 }
 \description{
-Generate a sequence of timestamps
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 }
 \details{
 n is expected to receive an integer. If a decimal value is provided, then round()

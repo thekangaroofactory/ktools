@@ -2,6 +2,8 @@
 
 #' Generate a sequence of timestamps
 #'
+#' `r lifecycle::badge("deprecated")`
+#'
 #' @param n an integer representing the desired output vector length (see details)
 #'
 #' @return a numeric vector of timestamps
