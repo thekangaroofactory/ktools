@@ -24,10 +24,19 @@ screenshot_stop(
 \item{background}{character string for the background color}
 }
 \description{
-Stop Record Plots
+This is a wrapper function to stop plot viewer recording and build a gif
+from the captures.
+}
+\details{
+The camcorder package is set as suggest in this package to avoid unnecessary
+installation or extra dependencies. In case it is not found, the function
+will throw a warning and exit with NULL.
 }
 \examples{
 \dontrun{
 screenshot_stop(first = 1, last = 1, frame = 0.25, loop = TRUE, background = "none")
 }
+}
+\seealso{
+\code{\link[camcorder:Recording]{camcorder::gg_playback()}}
 }

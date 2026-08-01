@@ -4,12 +4,14 @@
 \alias{copy_template}
 \title{Copy Package Template Files}
 \usage{
-copy_template(template, path = getwd())
+copy_template(template, path = getwd(), filename = NULL)
 }
 \arguments{
 \item{template}{the name of the template file to be copied}
 
 \item{path}{destination path where to copy the template}
+
+\item{filename}{the name of the copy}
 }
 \value{
 the output of the file.copy function call
@@ -18,5 +20,5 @@ the output of the file.copy function call
 Copy Package Template Files
 }
 \examples{
-copy_template(template = "template_shiny_server", path = "shinyapp")
+copy_template(template = "template_shiny_server", path = "shinyapp", filename = "my_server.R")
 }

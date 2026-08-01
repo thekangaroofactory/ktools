@@ -7,17 +7,25 @@
 screenshot_start(height = NULL, width = NULL, dpi = 300)
 }
 \arguments{
-\item{height}{plot size in units (see camcorder::gg_record())}
+\item{height}{plot size (units)}
 
-\item{width}{plot size in units (see camcorder::gg_record())}
+\item{width}{plot size (units)}
 
-\item{dpi}{plot resolution (see camcorder::gg_record())}
+\item{dpi}{plot resolution value (default = 300)}
 }
 \description{
-Start Record Plots
+This is a wrapper function to init plot viewer recording.
+}
+\details{
+The camcorder package is set as suggest in this package to avoid unnecessary
+installation or extra dependencies. In case it is not found, the function
+will throw a warning and exit with NULL.
 }
 \examples{
 \dontrun{
 screenshot_start(height = 5, width = 10, dpi = 350)
 }
+}
+\seealso{
+\code{\link[camcorder:Recording]{camcorder::gg_record()}}
 }
