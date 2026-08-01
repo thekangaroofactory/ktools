@@ -2,7 +2,7 @@
 % Please edit documentation in R/has_date.R
 \name{has_date}
 \alias{has_date}
-\title{Find Date Column}
+\title{Find Date Column(s)}
 \usage{
 has_date(x, single = TRUE)
 }
@@ -15,7 +15,7 @@ has_date(x, single = TRUE)
 the name of the column(s) or NA if no date column is found
 }
 \description{
-Find Date Column
+Detects Date and/or POSIXct column(s) in a data.frame
 }
 \examples{
 has_date(data.frame(date = Sys.Date()))

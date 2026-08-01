@@ -1,6 +1,9 @@
 
 
-#' Find Date Column
+#' Find Date Column(s)
+#'
+#' @description
+#' Detects Date and/or POSIXct column(s) in a data.frame
 #'
 #' @param x a data.frame object
 #' @param single a logical (default TRUE) if it should return only the first column
