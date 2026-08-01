@@ -7,7 +7,7 @@
 #'
 #' @param id the id of the module. Can be a vector of ids in case of sub module.
 #' @param output the name of the output
-#' @param type the type of output: ui (default), plot, table
+#' @param type the type of output: ui (default), text, plot, table
 #' @param ... other arguments to pass to the *Output function
 #'
 #' @returns the ui object
@@ -34,6 +34,9 @@ simple_ui <- function(id, output, type = "ui", ...){
 
          # -- renderUI
          ui = shiny::uiOutput(ns(output), ...),
+
+         # -- renderText
+         text = shiny::textOutput(ns(output), ...),
 
          # -- renderPlot
          plot = shiny::plotOutput(ns(output), ...),
