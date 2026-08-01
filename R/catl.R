@@ -1,15 +1,15 @@
 
 
-#' Simple Wrapper Around Cat
+#' Wrapper Around Cat
+#'
+#' @description
+#' This wrapper function aims at enabling a trace level mechanism that relies
+#' on the \link[base]{cat} function.
 #'
 #' @param ... R objects as defined in \link[base]{cat}
 #' @param level a numeric value indicating the level of trace
 #' @param debug an optional (usually omitted) value to indicate the level of trace to be displayed
 #' @param newline a logical. If TRUE (default), new line \code{"\n"} will be added
-#'
-#' @description
-#' This wrapper function aims at enabling a trace level mechanism that relies
-#' on the \link[base]{cat} function.
 #'
 #' @details
 #' The goal is to provide a trace level mechanism that can be disabled in a
@@ -24,11 +24,17 @@
 #'
 #' The \link[ktools]{trace_level} function can be used to activate a specific trace level.
 #'
+#' @return None (invisible NULL)
 #' @export
 #'
 #' @examples
+#' # silent unless TRACE_LEVEL is set
 #' catl("Awesome message here")
+#'
+#' # force print no matter if TRACE_LEVEL is set
 #' catl("Awesome message here", debug = 1)
+#'
+#' # demonstrate trace levels
 #' catl("Awesome message here", level = 2, debug = 1)
 #' catl("Awesome message here", level = 1, debug = 2)
 #'
