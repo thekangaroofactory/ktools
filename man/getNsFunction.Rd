@@ -2,7 +2,7 @@
 % Please edit documentation in R/getNsFunction.R
 \name{getNsFunction}
 \alias{getNsFunction}
-\title{Trick to solve the use of :: for package functions in do.call()}
+\title{Use Package Function in Do Call}
 \usage{
 getNsFunction(x)
 }
