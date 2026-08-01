@@ -7,18 +7,18 @@
 count_lines(con, verbose = FALSE)
 }
 \arguments{
-\item{con}{a connection object or a character string (will be passed to \link[base]{readLines})}
+\item{con}{a connection object or a character string (passed to \link[base]{readLines})}
 
 \item{verbose}{a logical (FALSE by default) if counts should be printed to the console}
 }
 \value{
-a named vector
+a named vector (total, code, comment, documentation, spacing)
 }
 \description{
-Count Lines
+Builds a basic code count report.
 }
 \details{
-Code lines ending with a comment are counted as code lines (hence ignored from comments)
+Code lines ending with a comment are counted as code lines (hence ignored from comments).
 }
 \examples{
 infile <- tempfile()
