@@ -13,7 +13,7 @@ filter_date(x, colname = NULL, ref = Sys.Date(), unit = "month")
 
 \item{ref}{an optional Date value to be used as a reference for the date range}
 
-\item{unit}{a string to compute the date range (default = "month") (see \link\code{\link[lubridate:round_date]{lubridate::round_date()}})}
+\item{unit}{a string to compute the date range (default = "month") (see \link[lubridate]{round_date})}
 }
 \value{
 a filtered data.frame
