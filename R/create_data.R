@@ -1,13 +1,19 @@
 
 #' Create Data
 #'
+#' @description
+#' Builds an empty data.frame from a vector of colClasses.
+#'
 #' @param colClasses a named vector of classes to be used to build the data.frame.
-#' names will be used to name the columns, values will be used to cast them to the given classes.
 #'
 #' @details
-#' If NA is given as input for colClasses, then read.table() will return an empty data.frame (0 obs. of 0 variables)
+#' The names of the vector will be used to name the columns and the values
+#' to cast the columns to the given classes.
 #'
-#' @return a data.frame, output of read.table() function
+#' If NA is given as input for colClasses, then read.table() will return
+#' an empty data.frame (0 obs. of 0 variables)
+#'
+#' @return a data.frame
 #' @export
 #'
 #' @examples
@@ -21,12 +27,9 @@ create_data <- function(colClasses){
   if(anyNA(colClasses))
     return(data.frame())
 
-  # -- Get colnames
-  col.names <- names(colClasses)
-
   # -- Build data.frame & return
   data <- utils::read.table(text = "",
                             colClasses = colClasses,
-                            col.names = col.names)
+                            col.names = names(colClasses))
 
 }
