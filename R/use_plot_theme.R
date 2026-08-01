@@ -9,6 +9,7 @@
 #' @param path where to copy the template
 #'
 #' @export
+#' @return the output of copy_template()
 #'
 #' @examples
 #' \dontrun{
@@ -17,6 +18,6 @@
 
 use_plot_theme <- function(path = getwd()){
 
-  copy_template(template = "template_plot_theme", path = path)
+  copy_template(template = "template_plot_theme.R", path = path)
 
 }

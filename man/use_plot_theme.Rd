@@ -9,6 +9,9 @@ use_plot_theme(path = getwd())
 \arguments{
 \item{path}{where to copy the template}
 }
+\value{
+the output of copy_template()
+}
 \description{
 Helper function to create a theme function that can be used across
 the project.
