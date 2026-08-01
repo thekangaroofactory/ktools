@@ -1,7 +1,7 @@
-# add_r_environ works
+# use_plot_theme works
 
     Code
-      copy_template(template = "global.R", pkg = "ktools", path = testdata_path)
+      use_plot_theme(path = testdata_path)
     Output
       Copy template to destination path = E:/Portfolio/R/Packages/ktools/tests/testthat/testdata 
       [1] TRUE
