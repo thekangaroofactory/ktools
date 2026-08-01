@@ -13,7 +13,7 @@ a numeric id
 Wrapper around getTimestamp()
 }
 \details{
-By default \link\code{\link[=getTimestamp]{getTimestamp()}} gives a value up to the millisecond.
+By default \code{\link[=getTimestamp]{getTimestamp()}} gives a value up to the millisecond.
 
 In some use cases, for example when a sequence of ids need to be generated
 grammatically, multiple identical values will be generated within the same
