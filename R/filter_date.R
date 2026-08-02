@@ -19,10 +19,10 @@
 #'
 #' @examples
 #' # -- this month (the default)
-#' filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = 1, max = 50)))
+#' filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)))
 #'
 #' # -- previous month
-#' filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = 1, max = 50)), ref = Sys.Date() - 31)
+#' filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)), ref = Sys.Date() - as.integer(format(Sys.Date(), "%d")))
 #'
 
 filter_date <- function(x, colname = NULL, ref = Sys.Date(), unit = "month"){
@@ -35,6 +35,10 @@ filter_date <- function(x, colname = NULL, ref = Sys.Date(), unit = "month"){
     colname <- has_date(x, single = TRUE)
   else
     stopifnot("colname must be an existing column name" = colname %in% names(x))
+
+  # -- check
+  if(is.na(colname))
+    stop("x must contain a Date or POSIXct column")
 
   # -- return (filtered data)
   x |>
