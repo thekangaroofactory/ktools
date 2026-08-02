@@ -18,6 +18,9 @@
 
 has_date <- function(x, single = TRUE){
 
+  # -- check for empty data.frame
+  stopifnot("x must have at least one column" = ncol(x) != 0)
+
   if(single)
     names(x)[sapply(x, FUN = function(x) inherits(x, "POSIXct") | inherits(x, "Date"))][1]
   else
