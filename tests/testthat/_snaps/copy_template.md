@@ -1,4 +1,4 @@
-# add_r_environ works
+# copy_template works
 
     Code
       copy_template(template = "global.R", pkg = "ktools", path = testdata_path)

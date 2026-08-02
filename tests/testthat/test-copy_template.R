@@ -1,6 +1,6 @@
 
 
-test_that("add_r_environ works", {
+test_that("copy_template works", {
 
   # -- create folder
   testdata_path <- create_folder()
@@ -13,6 +13,7 @@ test_that("add_r_environ works", {
   clean_all(testdata_path)
 
   # -- negative test
+  # when template does not exist
   expect_error(copy_template(template = "dummy", pkg = "ktools", path = testdata_path))
 
 })
