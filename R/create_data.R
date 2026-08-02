@@ -28,8 +28,8 @@ create_data <- function(colClasses){
     return(data.frame())
 
   # -- Build data.frame & return
-  data <- utils::read.table(text = "",
-                            colClasses = colClasses,
-                            col.names = names(colClasses))
+  utils::read.table(text = "",
+                    colClasses = colClasses,
+                    col.names = names(colClasses))
 
 }
