@@ -17,14 +17,14 @@
 #' will throw a warning and exit with NULL.
 #'
 #' @export
-#' @return NULL
+#' @return NULL (invisible)
 #'
 #' @examples
 #' \dontrun{
 #' screenshot_start(height = 5, width = 10, dpi = 350)
 #' }
 
-screenshot_start <- function(height = NULL, width = NULL, dpi = 300){
+screenshot_start <- function(height = NA, width = NA, dpi = 300){
 
   # -- making the camcorder dependency optional for this package
   if (!requireNamespace("camcorder", quietly = TRUE)) {
@@ -38,7 +38,7 @@ screenshot_start <- function(height = NULL, width = NULL, dpi = 300){
   camcorder::gg_resize_film(height = height, width = width, dpi = dpi)
 
   # -- return
-  NULL
+  invisible(NULL)
 
 }
 

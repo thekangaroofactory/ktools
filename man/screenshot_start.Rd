@@ -4,7 +4,7 @@
 \alias{screenshot_start}
 \title{Start Record Plots}
 \usage{
-screenshot_start(height = NULL, width = NULL, dpi = 300)
+screenshot_start(height = NA, width = NA, dpi = 300)
 }
 \arguments{
 \item{height}{plot size (units)}
@@ -12,6 +12,9 @@ screenshot_start(height = NULL, width = NULL, dpi = 300)
 \item{width}{plot size (units)}
 
 \item{dpi}{plot resolution value (default = 300)}
+}
+\value{
+NULL (invisible)
 }
 \description{
 This is a wrapper function to init plot viewer recording.
