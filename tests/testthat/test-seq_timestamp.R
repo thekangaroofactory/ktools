@@ -10,4 +10,7 @@ test_that("seq_timestamp works", {
   # -- check
   expect_equal(length(x), n)
 
+  # -- test check arg
+  expect_warning(x <- seq_timestamp(n = 2.5))
+
 })
