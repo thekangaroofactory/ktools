@@ -59,16 +59,16 @@ use_shiny <- function(path = getwd(), app_dir = "shinyapp", data_dir = NULL, mod
   copy_template(template = "global.R", path = file.path(path, app_dir))
 
   # -- Implement server / ui from templates
-  copy_template(template = "template_shiny_server.R", name = "server.R", path = file.path(path, app_dir))
-  copy_template(template = "template_shiny_ui_navbar.R", name = "ui.R", path = file.path(path, app_dir))
+  copy_template(template = "template_shiny_server.R", filename = "server.R", path = file.path(path, app_dir))
+  copy_template(template = "template_shiny_ui_navbar.R", filename = "ui.R", path = file.path(path, app_dir))
 
 
   # -- Implement module server / ui from template
   if(module){
 
     dir.create(file.path(path, app_dir, "R", "module"))
-    copy_template(template = "template_shiny_module_server.R", name = "module_server.R", path = file.path(path, app_dir, "R", "module"))
-    copy_template(template = "template_shiny_module_ui.R", name = "module_ui.R", path = file.path(path, app_dir, "R", "module"))}
+    copy_template(template = "template_shiny_module_server.R", filename = "module_server.R", path = file.path(path, app_dir, "R", "module"))
+    copy_template(template = "template_shiny_module_ui.R", filename = "module_ui.R", path = file.path(path, app_dir, "R", "module"))}
 
   #
   invisible(NULL)
