@@ -22,7 +22,8 @@
 #' filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)))
 #'
 #' # -- previous month
-#' filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)), ref = Sys.Date() - as.integer(format(Sys.Date(), "%d")))
+#' filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)),
+#' ref = Sys.Date() - as.integer(format(Sys.Date(), "%d")))
 #'
 
 filter_date <- function(x, colname = NULL, ref = Sys.Date(), unit = "month"){

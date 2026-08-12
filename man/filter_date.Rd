@@ -27,9 +27,10 @@ By default, it will filter the input data.frame to keep dates belonging to the c
 }
 \examples{
 # -- this month (the default)
-filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = 1, max = 50)))
+filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)))
 
 # -- previous month
-filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = 1, max = 50)), ref = Sys.Date() - 31)
+filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)),
+ref = Sys.Date() - as.integer(format(Sys.Date(), "\%d")))
 
 }
