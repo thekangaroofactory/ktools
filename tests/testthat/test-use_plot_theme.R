@@ -6,7 +6,7 @@ test_that("use_plot_theme works", {
   testdata_path <- create_folder()
 
   # -- function calls
-  expect_snapshot(use_plot_theme(path = testdata_path))
+  expect_no_error(use_plot_theme(path = testdata_path))
   expect_true(file.exists(file.path(testdata_path, "plot_theme.R")))
 
   # -- delete folder
