@@ -6,10 +6,10 @@ test_that("use_shiny works", {
   testdata_path <- create_folder()
 
   # -- function calls
-  expect_no_error(use_shiny(testdata_path, module = TRUE))
+  expect_no_error(use_shiny(path = testdata_path, module = TRUE))
   expect_true(file.exists(file.path(testdata_path, "shinyapp", "server.R")))
 
-  # -- delete folder
+  # -- delete test data
   clean_all(testdata_path)
 
 })
