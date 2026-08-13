@@ -22,5 +22,7 @@ When the function detects a direct call (i.e. not from another function), then i
 otherwise it finds the calling function name and print indented output based on callstack position.
 }
 \examples{
+\dontrun{
 incat("This message")
+}
 }

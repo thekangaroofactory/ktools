@@ -17,12 +17,13 @@ A helper function to set the trace level that will be printed by
 \link[ktools]{catl}
 }
 \details{
-\code{level} is used to define the level of trace printed by \link[ktools]{catl}
+\code{level} is used to define the level of trace printed by \link[ktools]{catl}.
 Use 0 to set the trace OFF or NULL to get the current trace level.
 }
 \examples{
 trace_level()
 trace_level(2)
+trace_level(0)
 }
 \seealso{
 \code{\link[=catl]{catl()}}

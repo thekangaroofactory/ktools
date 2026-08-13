@@ -2,10 +2,10 @@
 
 #' Compute date range
 #'
-#' `r lifecycle::badge('deprecated')`
-#'
 #' @description
 #' Compute specific date range between two dates.
+#'
+#' `r lifecycle::badge('deprecated')`
 #'
 #' @param min a Date for the lower value
 #' @param max a Date for the higher value

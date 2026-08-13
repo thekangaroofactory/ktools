@@ -17,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: philippe peret \email{philippe.peret@hotmail.com} (\href{https://orcid.org/0009-0003-9666-7490}{ORCID}) [copyright holder]
+\strong{Maintainer}: Philippe Peret \email{philippe.peret@hotmail.com} (\href{https://orcid.org/0009-0003-9666-7490}{ORCID}) [copyright holder]
 
 }
 \keyword{internal}

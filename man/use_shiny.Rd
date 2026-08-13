@@ -20,10 +20,10 @@ NULL (invisibly)
 }
 \description{
 The function is used to setup a Shiny App with optional module based on templates.
+
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 }
 \details{
-\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
-
 When data_dir is null, DATA_HOME environment variable will not be set.
 }
 \examples{

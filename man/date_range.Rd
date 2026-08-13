@@ -18,8 +18,7 @@ a Date vector c(start, end)
 }
 \description{
 Compute specific date range between two dates.
-}
-\details{
+
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 }
 \examples{

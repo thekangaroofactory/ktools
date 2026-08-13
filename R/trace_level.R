@@ -9,7 +9,7 @@
 #' @param level an integer (or NULL)
 #'
 #' @details
-#' `level` is used to define the level of trace printed by \link[ktools]{catl}
+#' `level` is used to define the level of trace printed by \link[ktools]{catl}.
 #' Use 0 to set the trace OFF or NULL to get the current trace level.
 #'
 #' @seealso [catl()]
@@ -20,6 +20,7 @@
 #' @examples
 #' trace_level()
 #' trace_level(2)
+#' trace_level(0)
 
 trace_level <- function(level = NULL){
 

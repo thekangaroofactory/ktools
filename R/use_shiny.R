@@ -2,10 +2,10 @@
 
 #' Setup Shiny App
 #'
-#'`r lifecycle::badge("experimental")`
-#'
 #' @description
 #' The function is used to setup a Shiny App with optional module based on templates.
+#'
+#' `r lifecycle::badge("experimental")`
 #'
 #' @param path the path where to setup the Shiny app (default = working directory)
 #' @param app_dir the name of the app folder (default = "shinyapp")

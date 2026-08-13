@@ -15,7 +15,9 @@
 #' otherwise it finds the calling function name and print indented output based on callstack position.
 #'
 #' @examples
+#' \dontrun{
 #' incat("This message")
+#' }
 
 
 incat <- function(x, sep = ""){
