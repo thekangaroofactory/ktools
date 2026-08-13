@@ -9,7 +9,8 @@
 #' @param id a vector or list of ids.
 #' @param label the label for the actionLink.
 #' @param target the name of the target input.
-#' @param ns the namespace function to use.
+#' @param value an optional value to pass to the target input
+#' @param namespace the namespace function to use.
 #' @param pattern the pattern to generate unique inputId's.
 #' @param as_character a logical if the shiny.tag should be returned or a character value.
 #'
@@ -20,7 +21,7 @@
 #' All produced actionLinks will target the same input with different values.
 #' `input$target` will receive the inputId, from which one can extract the source id for example.
 #'
-#' If used from the main server, skip `ns`.
+#' If used from the main server, skip `namespace`.
 #'
 #' @returns a list of shiny tags or character values.
 #' @export
@@ -43,7 +44,8 @@
 #' action_link(id = c(1,2,3), label = "click", target = "on_click", value = "do_this")
 #'
 #' # -- Use with Shiny module:
-#' action_link(id = c(1,2,3), label = "click", target = "on_click", pattern = "do_this", namespace = "mod1")
+#' action_link(id = c(1,2,3), label = "click", target = "on_click",
+#'             pattern = "do_this", namespace = "mod1")
 #' }
 
 action_link <- function(id, label, target, value = NULL, namespace = NULL, pattern = "action_link", as_character = FALSE){

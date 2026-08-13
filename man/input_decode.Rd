@@ -20,4 +20,5 @@ The function is used together with the \code{\link[=action_link]{action_link()}}
 }
 \examples{
 input_decode("module1-add_leg_896")
+input_decode("add_leg_896")
 }

@@ -21,11 +21,13 @@ action_link(
 
 \item{target}{the name of the target input.}
 
+\item{value}{an optional value to pass to the target input}
+
+\item{namespace}{the namespace function to use.}
+
 \item{pattern}{the pattern to generate unique inputId's.}
 
 \item{as_character}{a logical if the shiny.tag should be returned or a character value.}
-
-\item{ns}{the namespace function to use.}
 }
 \value{
 a list of shiny tags or character values.
@@ -41,7 +43,7 @@ across different module instances.
 All produced actionLinks will target the same input with different values.
 \code{input$target} will receive the inputId, from which one can extract the source id for example.
 
-If used from the main server, skip \code{ns}.
+If used from the main server, skip \code{namespace}.
 }
 \examples{
 \dontrun{
@@ -61,6 +63,7 @@ action_link(id = c(1,2,3), label = "click", target = "on_click", pattern = "do_t
 action_link(id = c(1,2,3), label = "click", target = "on_click", value = "do_this")
 
 # -- Use with Shiny module:
-action_link(id = c(1,2,3), label = "click", target = "on_click", pattern = "do_this", namespace = "mod1")
+action_link(id = c(1,2,3), label = "click", target = "on_click",
+            pattern = "do_this", namespace = "mod1")
 }
 }
