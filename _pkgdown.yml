@@ -45,8 +45,6 @@ reference:
 - title: Plots
   contents:
   - use_plot_theme
-  - screenshot_start
-  - screenshot_stop
 
 - title: Shiny
   contents:
