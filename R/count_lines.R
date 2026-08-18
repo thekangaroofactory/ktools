@@ -2,14 +2,19 @@
 
 #' Count Lines
 #'
-#' @param p a connection object or a character string (will be passed to readLines())
+#' @description
+#' Builds a basic code count report.
+#'
+#' @param con a connection object or a character string (passed to \link[base]{readLines})
 #' @param verbose a logical (FALSE by default) if counts should be printed to the console
 #'
-#' @returns a named vector
+#' @returns a named vector (total, code, comment, documentation, spacing)
 #' @export
 #'
 #' @details
-#' Code lines ending with a comment are counted as code lines (hence ignored from comments)
+#' Code lines ending with a comment are counted as code lines (hence ignored from comments).
+#'
+#' @seealso [scan_code()]
 #'
 #' @examples
 #' infile <- tempfile()
@@ -19,10 +24,10 @@
 #' writeLines(lines, infile)
 #' count_lines(infile)
 
-count_lines <- function(p, verbose = FALSE) {
+count_lines <- function(con, verbose = FALSE) {
 
   # -- read
-  l = readLines(p)
+  l = readLines(con)
 
   # ----------------------------------------------------------------------------
   # Total lines
@@ -69,9 +74,9 @@ count_lines <- function(p, verbose = FALSE) {
 
   # -- return
   c(total = total_lines,
-    spacing = empty_lines,
-    doc = doc_lines,
+    code = code_lines,
     comment = comment_lines,
-    code = code_lines)
+    doc = doc_lines,
+    spacing = empty_lines)
 
 }

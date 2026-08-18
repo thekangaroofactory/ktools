@@ -11,7 +11,7 @@ simple_ui(id, output, type = "ui", ...)
 
 \item{output}{the name of the output}
 
-\item{type}{the type of output: ui (default), plot, table}
+\item{type}{the type of output: ui (default), text, plot, table}
 
 \item{...}{other arguments to pass to the *Output function}
 }

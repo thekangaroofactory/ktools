@@ -1,0 +1,73 @@
+url: https://thekangaroofactory.github.io/ktools/
+
+template:
+  bootstrap: 5
+  light-switch: true
+
+authors:
+  Philippe Peret:
+    href: https://www.linkedin.com/in/philippeperet/
+
+articles:
+- title: Shiny UI-Server communication
+  desc: Articles related to the package usage within Shiny apps.
+  contents:
+  - vectorized-actions
+
+reference:
+- title: Helper functions
+  desc: These functions are meant to homogenize practices across projects.
+  contents:
+  - use_r_environ
+  - update_r_environ
+  - copy_template
+  - use_shiny
+
+- title: Environment, traces & debug
+  desc:
+  contents:
+  - catl
+  - trace_level
+  - incat
+  - count_lines
+  - scan_code
+  - source_code
+
+- title: Date & time
+  contents:
+  - getTimestamp
+  - uuid
+  - has_date
+  - filter_date
+
+- title: Manipulate data & objects
+  contents:
+  - create_data
+  - match.list
+  - match.option
+  - toupper_words
+  - toupperfirst
+
+- title: Plots
+  contents:
+  - use_plot_theme
+
+- title: Shiny
+  contents:
+  - simple_ui
+  - onclick_event
+  - action_link
+  - input_decode
+
+- title: Javascript
+  contents:
+  - with_js
+
+- title: Miscellaneous
+  contents:
+  - getNsFunction
+
+- title: Deprecated functions
+  contents:
+  - seq_timestamp
+  - date_range

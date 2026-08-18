@@ -1,28 +1,31 @@
 Package: ktools
 Title: Utility Tools
-Version: 0.9.8
+Version: 0.9.9
 Authors@R: 
-    person(given = "philippe",
-           family = "peret",
-           role = c("aut", "cre"),
+    person(given = "Philippe",
+           family = "Peret",
+           role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0009-0003-9666-7490"),
            email = "philippe.peret@hotmail.com")
-Description: Various tools to make (my) life easier.
+Description: Various utility tools to make (my) life easier. ktools is primarily designed to host functions shared by various other packages and projects.
 License: GPL (>= 3) + file LICENSE
-URL: https://github.com/thekangaroofactory/ktools
+URL: https://thekangaroofactory.github.io/ktools/
 BugReports: https://github.com/thekangaroofactory/ktools/issues
 Depends:
     R (>= 4.1.0)
 Imports:
+    lifecycle,
     dplyr,
     lubridate,
     htmltools,
     shiny,
-    DT,
-    camcorder
+    DT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    quarto
+VignetteBuilder: 
+    quarto
 Config/testthat/edition: 3

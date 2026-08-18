@@ -13,8 +13,12 @@ scan_code(path = getwd())
 a data.frame with counts for the scanned files
 }
 \description{
-Scan Code
+Generates a code report for a given path.
 }
 \examples{
-scan_code()
+\dontrun{
+scan_code()}
+}
+\seealso{
+\code{\link[=count_lines]{count_lines()}}
 }

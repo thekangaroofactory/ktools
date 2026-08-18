@@ -2,6 +2,8 @@
 
 #' Generate a sequence of timestamps
 #'
+#' `r lifecycle::badge("deprecated")`
+#'
 #' @param n an integer representing the desired output vector length (see details)
 #'
 #' @return a numeric vector of timestamps
@@ -12,10 +14,13 @@
 #' will be used, which means that 2.8 will return a length 3 vector.
 #'
 #' @examples
-#' seq_timestamp(n = 2)
+#' \dontrun{
+#' seq_timestamp(n = 2)}
 
 
 seq_timestamp <- function(n = 2){
+
+  .Deprecated(new = "replicate(10, uuid())")
 
   # -- test if arg is an integer
   if(n %% 1 != 0)

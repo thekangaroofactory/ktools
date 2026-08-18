@@ -12,6 +12,10 @@
 #' @param script the script to include (relative to src)
 #'
 #' @details
+#' The function is designed to be called from another function that creates / updates
+#' a widget that requires JavaScript so that the user does not need to manage the
+#' dependency manually.
+#'
 #' When `session` is NULL, the function will return without doing anything.
 #' This is useful when the function is called from ui side. The JavaScript
 #' dependency will be attached next time the function is called from server side.
@@ -24,6 +28,7 @@
 #' @importFrom utils installed.packages
 #'
 #' @export
+#' @return NULL (invisibly)
 #'
 #' @examples
 #' \dontrun{
@@ -60,5 +65,8 @@ with_js <- function(package, src, script, session = shiny::getDefaultReactiveDom
     session$userData[[env_name]] <- TRUE
 
   }
+
+  # -- return
+  invisible(NULL)
 
 }

@@ -3,7 +3,7 @@
 create_folder <- function(){
 
   # -- create folder
-  testdata_path <- file.path(system.file("tests", "testthat", package = "ktools"), "testdata")
+  testdata_path <- file.path(test_path(), "testdata")
   dir.create(testdata_path, recursive = TRUE, showWarnings = FALSE)
 
   # -- return

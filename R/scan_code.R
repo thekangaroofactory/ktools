@@ -2,13 +2,19 @@
 
 #' Scan Code
 #'
+#' @description
+#' Generates a code report for a given path.
+#'
 #' @param path a path to scan
 #'
 #' @returns a data.frame with counts for the scanned files
 #' @export
 #'
+#' @seealso [count_lines()]
+#'
 #' @examples
-#' scan_code()
+#' \dontrun{
+#' scan_code()}
 
 scan_code <- function(path = getwd()){
 

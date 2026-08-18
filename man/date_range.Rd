@@ -17,7 +17,9 @@ date_range(min, max, type = "this_year")
 a Date vector c(start, end)
 }
 \description{
-Compute date range
+Compute specific date range between two dates.
+
+\ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 }
 \examples{
 date_range(min = Sys.Date()-365, max = Sys.Date()+365, type = "this_year")

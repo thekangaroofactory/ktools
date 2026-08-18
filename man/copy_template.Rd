@@ -4,12 +4,16 @@
 \alias{copy_template}
 \title{Copy Package Template Files}
 \usage{
-copy_template(template, path = getwd())
+copy_template(template, pkg = "ktools", path = getwd(), filename = NULL)
 }
 \arguments{
 \item{template}{the name of the template file to be copied}
 
-\item{path}{destination path where to copy the template}
+\item{pkg}{the name of the package where to find the template (default = ktools)}
+
+\item{path}{destination path where to copy the template (default = working directory)}
+
+\item{filename}{the name of the copy (optional)}
 }
 \value{
 the output of the file.copy function call
@@ -17,6 +21,14 @@ the output of the file.copy function call
 \description{
 Copy Package Template Files
 }
+\details{
+When \code{filename} is not provided, the copy will have same name as the template
+without the "template_" prefix pattern.
+
+An error will be thrown if the template file is not found.
+}
 \examples{
-copy_template(template = "template_shiny_server", path = "shinyapp")
+\dontrun{
+copy_template(template = "template_shiny_server.R", path = "shinyapp", filename = "my_server.R")
+}
 }

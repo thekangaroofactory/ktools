@@ -9,23 +9,28 @@ filter_date(x, colname = NULL, ref = Sys.Date(), unit = "month")
 \arguments{
 \item{x}{a data.frame with a Date or POSIXct column}
 
-\item{colname}{an optional character string to provide the name of the column to filter}
+\item{colname}{an optional character string to provide the name of the column to use in filter}
 
 \item{ref}{an optional Date value to be used as a reference for the date range}
 
-\item{unit}{a string (see \code{lubridate::round_date()})}
+\item{unit}{a string to compute the date range (default = "month") (see \link[lubridate]{round_date})}
 }
 \value{
 a filtered data.frame
 }
 \description{
-Filter by Date Range
+Filter a data.frame by specific date range.
+}
+\details{
+The purpose of this function is to make data navigation between date range easier.
+By default, it will filter the input data.frame to keep dates belonging to the current month.
 }
 \examples{
 # -- this month (the default)
-filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = 1, max = 50)))
+filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)))
 
 # -- previous month
-filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = 1, max = 50)), ref = Sys.Date() - 31)
+filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)),
+ref = Sys.Date() - as.integer(format(Sys.Date(), "\%d")))
 
 }
