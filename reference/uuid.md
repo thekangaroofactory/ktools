@@ -31,7 +31,7 @@ enough the get unique value for example when it's called from lapply.
 
 ``` r
 uuid()
-#> [1] 1.787045e+15
+#> [1] 1.78705e+15
 
 # showing what the function is trying to solve
 any(duplicated(replicate(100, getTimestamp())))

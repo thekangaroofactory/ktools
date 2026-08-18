@@ -123,12 +123,12 @@ That is when onClick comes into action:</p>
 </h2>
 <p>To reduce the amount of redundant code to write &amp; avoid mistakes, ktools provides 3 functions that support this pattern:</p>
 <ul>
-<li><p>onclick_event()</p></li>
-<li><p>action_link()</p></li>
-<li><p>input_decode()</p></li>
+<li><p><code><a href="../reference/onclick_event.html">onclick_event()</a></code></p></li>
+<li><p><code><a href="../reference/action_link.html">action_link()</a></code></p></li>
+<li><p><code><a href="../reference/input_decode.html">input_decode()</a></code></p></li>
 </ul>
-<p>The first one helps building the onClick event instruction, including namespace when working with Shiny modules. It’s called inside the action_link() function but could be used for example to tune an <code>actionButton</code>.</p>
-<p>The action_link() function is a vectorized wrapper around the Shiny::actionLink() function that also includes namespace capabilities.</p>
+<p>The first one helps building the onClick event instruction, including namespace when working with Shiny modules. It’s called inside the <code><a href="../reference/action_link.html">action_link()</a></code> function but could be used for example to tune an <code>actionButton</code>.</p>
+<p>The <code><a href="../reference/action_link.html">action_link()</a></code> function is a vectorized wrapper around the <code>Shiny::actionLink()</code> function that also includes namespace capabilities.</p>
 <p>The last one is meant to decode a specific pattern that can be used as inputId(s) for the actionLinks HTML tags, so that it can be sent to the observer that will decode the source (namespace), the action and a value (most probably the row id where to apply the action).</p>
 </section><section class="level2"><h2 id="use-case">Use case<a class="anchor" aria-label="anchor" href="#use-case"></a>
 </h2>
@@ -157,7 +157,7 @@ Let’s create a basic dataset:</p>
 </div>
 <p>This time, <code>input$on_click</code> will receive the custom tag id <code>"do_this_1"</code>, <code>"do_this_2"</code>, …<br>
 Which opens to using the same input entry to manage multiple actions inside the same observer / listener.</p>
-<p>The input_decode() function is here to assist:</p>
+<p>The <code><a href="../reference/input_decode.html">input_decode()</a></code> function is here to assist:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/input_decode.html">input_decode</a></span><span class="op">(</span><span class="st">"do_this_1"</span><span class="op">)</span></span></code></pre></div>

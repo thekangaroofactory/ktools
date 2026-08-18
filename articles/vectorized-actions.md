@@ -70,19 +70,21 @@ observeEvent(input$action, {
 To reduce the amount of redundant code to write & avoid mistakes, ktools
 provides 3 functions that support this pattern:
 
-- onclick_event()
+- [`onclick_event()`](https://thekangaroofactory.github.io/ktools/reference/onclick_event.md)
 
-- action_link()
+- [`action_link()`](https://thekangaroofactory.github.io/ktools/reference/action_link.md)
 
-- input_decode()
+- [`input_decode()`](https://thekangaroofactory.github.io/ktools/reference/input_decode.md)
 
 The first one helps building the onClick event instruction, including
 namespace when working with Shiny modules. It’s called inside the
-action_link() function but could be used for example to tune an
-`actionButton`.
+[`action_link()`](https://thekangaroofactory.github.io/ktools/reference/action_link.md)
+function but could be used for example to tune an `actionButton`.
 
-The action_link() function is a vectorized wrapper around the
-Shiny::actionLink() function that also includes namespace capabilities.
+The
+[`action_link()`](https://thekangaroofactory.github.io/ktools/reference/action_link.md)
+function is a vectorized wrapper around the `Shiny::actionLink()`
+function that also includes namespace capabilities.
 
 The last one is meant to decode a specific pattern that can be used as
 inputId(s) for the actionLinks HTML tags, so that it can be sent to the
@@ -132,7 +134,9 @@ This time, `input$on_click` will receive the custom tag id
 Which opens to using the same input entry to manage multiple actions
 inside the same observer / listener.
 
-The input_decode() function is here to assist:
+The
+[`input_decode()`](https://thekangaroofactory.github.io/ktools/reference/input_decode.md)
+function is here to assist:
 
 ``` r
 
