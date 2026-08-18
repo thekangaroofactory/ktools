@@ -1,5 +1,31 @@
-# ktools 0.9.8
+# ktools 0.9.9
 
+## New functions / features:
+- Implement the action_link function #61
+- Implement an input decode function for action_link #62
+- Implement the on_click event function #63
+- Implement use plot theme function #65
+
+## Improvements:
+- use_shiny function should be reviewed #69
+- copy_template should allow file rename #70
+- Copy_template function should take the package as an argument #71
+- [filter_date] The function needs to check for missing date column #78
+- [has_date] Function should check for empty data.frame (no column) #79
+
+## Miscellaneous:
+- Cleanup functions #67
+- Review package dependencies #76
+- Prepare package submission to CRAN #72
+
+## Documentation:
+- Review function documentation #74
+- Update copy_template example #77
+- Implement package documentation website #56
+- Write an article to cover complex instructions using actionLinks #82
+
+## Test coverage
+- Converge QA #73
 
 ## Deprecated functions
 - date_range()
