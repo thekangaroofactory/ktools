@@ -22,6 +22,9 @@ Since the action itself is expected to trigger the same code but with, for examp
 By default, two actionButtons will target two different inputs:
 
 ```{r}
+#| eval: false
+
+library(shiny)
 
 # -- on UI side
 actionButton(inputId = "btn_1", label = "Do this with row 1")
@@ -46,6 +49,7 @@ So the idea is to somehow bypass the incremental mechanism to send a specific va
 That is when onClick comes into action:
 
 ```{r}
+#| eval: false
 
 actionButton(inputId = "btn_1", 
              label = "Do this with row 1",
@@ -87,6 +91,7 @@ As said earlier, the motivation is to generated many similar actions to target v
 Let's create a basic dataset:
 
 ```{r}
+#| eval: false
 
 df <- data.frame(id = 1:10,
                  value = runif(10))
@@ -95,6 +100,8 @@ df <- data.frame(id = 1:10,
 From there, we want to create an actionLink for each row of the data.frame:
 
 ```{r}
+#| eval: false
+library(ktools)
 
 # -- Send default tag id to the target input:
 links <- action_link(id = df$id, label = "click", target = "on_click")
@@ -108,6 +115,8 @@ When clicked, those links will trigger `input$on_click`, passing the component's
 One can decide to make the component id(s) more explicit by using the `pattern` argument:
 
 ```{r}
+#| eval: false
+
 # -- Send custom tag id to the target input: 
 action_link(id = df$id, label = "click", target = "on_click", pattern = "do_this")
 ```
@@ -118,6 +127,8 @@ Which opens to using the same input entry to manage multiple actions inside the 
 The input_decode() function is here to assist:
 
 ```{r}
+#| eval: false
+
 input_decode("do_this_1")
 ```
 
@@ -126,6 +137,7 @@ It returns a named vector with shape c(namespace, action, value) or c(action, va
 The listener / observer will look like this:
 
 ```{r}
+#| eval: false
 
 observeEvent(input$on_click, {
   
@@ -149,3 +161,4 @@ The `namespace` argument in `action_link()` needs to be used when working with S
 It will also wrap the `target` input into the namespace so that the value will go to the right entry (i.e. in the module scope).
 
 By extension, one could target a namespace used in a different module to trigger cross module communication (although it's breaks the encapsulation [pattern](https://thekangaroofactory.github.io/communication-between-shiny-modules/communication-between-modules.html "See Mastering Communication Between Shiny Modules")).
+
