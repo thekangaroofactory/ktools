@@ -1,0 +1,178 @@
+# Building vectorized Shiny UI / Server actions
+
+## Motivation
+
+ActionButtons & actionLinks are great components to communicate user
+actions from the UI of a Shiny app to its server.
+
+But when it comes to generate many similar actions – for example one for
+each row of a data.frame – it becomes tricky to have one listener /
+observer for each of them on server side.
+
+Since the action itself is expected to trigger the same code but with,
+for example, different ids, one might want to setup a mechanism where
+different buttons or links will trigger the same listener / observer and
+pass the id of the row as value.
+
+## Customized onClick events
+
+By default, two actionButtons will target two different inputs:
+
+``` r
+
+library(shiny)
+
+# -- on UI side
+actionButton(inputId = "btn_1", label = "Do this with row 1")
+actionButton(inputId = "btn_2", label = "Do this with row 2")
+
+
+# -- on Server side
+observeEvent(input$btn_1, {
+  # do something with row 1
+})
+
+
+observeEvent(input$btn_2, {
+  # do something with row 2
+})
+```
+
+In this scenario, the id of the row is never passed / used because
+`input$btn_1` will just be incremented each time the user clicks on the
+button.
+
+So the idea is to somehow bypass the incremental mechanism to send a
+specific value to a single observer.  
+That is when onClick comes into action:
+
+``` r
+
+actionButton(inputId = "btn_1", 
+             label = "Do this with row 1",
+             onClick = paste0('Shiny.setInputValue(\"action\", 1, {priority: \"event\"})'))
+
+actionButton(inputId = "btn_2", 
+             label = "Do this with row 1",
+             onClick = paste0('Shiny.setInputValue(\"action\", 2, {priority: \"event\"})'))
+
+
+observeEvent(input$action, {
+  
+  # -- perform action of specific row
+  target_row <- input$action
+  
+})
+```
+
+## Helper functions
+
+To reduce the amount of redundant code to write & avoid mistakes, ktools
+provides 3 functions that support this pattern:
+
+- onclick_event()
+
+- action_link()
+
+- input_decode()
+
+The first one helps building the onClick event instruction, including
+namespace when working with Shiny modules. It’s called inside the
+action_link() function but could be used for example to tune an
+`actionButton`.
+
+The action_link() function is a vectorized wrapper around the
+Shiny::actionLink() function that also includes namespace capabilities.
+
+The last one is meant to decode a specific pattern that can be used as
+inputId(s) for the actionLinks HTML tags, so that it can be sent to the
+observer that will decode the source (namespace), the action and a value
+(most probably the row id where to apply the action).
+
+## Use case
+
+As said earlier, the motivation is to generated many similar actions to
+target vectorized / row-wise data.  
+Let’s create a basic dataset:
+
+``` r
+
+df <- data.frame(id = 1:10,
+                 value = runif(10))
+```
+
+From there, we want to create an actionLink for each row of the
+data.frame:
+
+``` r
+
+library(ktools)
+
+# -- Send default tag id to the target input:
+links <- action_link(id = df$id, label = "click", target = "on_click")
+```
+
+This will generate a list of actionLink components with unique id(s)
+based on a default pattern: `"action_link_1"`, `"action_link_2"`, …
+
+When clicked, those links will trigger `input$on_click`, passing the
+component’s id.
+
+One can decide to make the component id(s) more explicit by using the
+`pattern` argument:
+
+``` r
+
+# -- Send custom tag id to the target input: 
+action_link(id = df$id, label = "click", target = "on_click", pattern = "do_this")
+```
+
+This time, `input$on_click` will receive the custom tag id
+`"do_this_1"`, `"do_this_2"`, …  
+Which opens to using the same input entry to manage multiple actions
+inside the same observer / listener.
+
+The input_decode() function is here to assist:
+
+``` r
+
+input_decode("do_this_1")
+```
+
+It returns a named vector with shape c(namespace, action, value) or
+c(action, value) if no namespace has been used to identify the source or
+the action, the action itself and it’s target (value is the row id).
+
+The listener / observer will look like this:
+
+``` r
+
+observeEvent(input$on_click, {
+  
+  # -- decode input value
+  event <- input_decode(input$on_click)
+  
+  # -- do something on target row (here set it's 'value' column to 1)
+  if(event$action == "do_this")
+    df[df$id == event$value, ]$value <- 1
+  
+})
+```
+
+By extension, a unique `observeEvent` could be used to trigger various
+actions like add or subtract 1 to a quantity or set it to zero.
+
+## Working with Shiny modules
+
+The `namespace` argument in
+[`action_link()`](https://thekangaroofactory.github.io/ktools/reference/action_link.md)
+needs to be used when working with Shiny module to ensure the uniqueness
+of the HTML tag ids across the app.
+
+It will also wrap the `target` input into the namespace so that the
+value will go to the right entry (i.e. in the module scope).
+
+By extension, one could target a namespace used in a different module to
+trigger cross module communication (although it’s breaks the
+encapsulation
+[pattern](https://thekangaroofactory.github.io/communication-between-shiny-modules/communication-between-modules.html "See Mastering Communication Between Shiny Modules")).
