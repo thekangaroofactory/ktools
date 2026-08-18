@@ -8,6 +8,12 @@ authors:
   Philippe Peret:
     href: https://www.linkedin.com/in/philippeperet/
 
+articles:
+- title: Shiny UI-Server communication
+  desc: Articles related to the package usage within Shiny apps.
+  contents:
+  - vectorized-actions
+
 reference:
 - title: Helper functions
   desc: These functions are meant to homogenize practices across projects.
