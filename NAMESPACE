@@ -31,10 +31,14 @@ export(with_js)
 importFrom(DT,DTOutput)
 importFrom(htmltools,htmlDependency)
 importFrom(lifecycle,deprecated)
-importFrom(shiny,getDefaultReactiveDomain)
-importFrom(shiny,insertUI)
-importFrom(shiny,ns.sep)
-importFrom(shiny,plotOutput)
-importFrom(shiny,uiOutput)
-importFrom(utils,installed.packages)
-importFrom(utils,packageVersion)
+importFrom(shiny,
+  getDefaultReactiveDomain,
+  insertUI,
+  ns.sep,
+  plotOutput,
+  uiOutput
+)
+importFrom(utils,
+  installed.packages,
+  packageVersion
+)

@@ -7,17 +7,21 @@
 action_link(
   id,
   label,
+  icon = NULL,
   target,
   value = NULL,
   namespace = NULL,
   pattern = "action_link",
-  as_character = FALSE
+  as_character = FALSE,
+  ...
 )
 }
 \arguments{
 \item{id}{a vector or list of ids.}
 
 \item{label}{the label for the actionLink.}
+
+\item{icon}{an optional icon to pass to the shiny::actionLink() function.}
 
 \item{target}{the name of the target input.}
 
@@ -28,6 +32,8 @@ action_link(
 \item{pattern}{the pattern to generate unique inputId's.}
 
 \item{as_character}{a logical if the shiny.tag should be returned or a character value.}
+
+\item{...}{Named attributes to pass to the shiny::actionLink() function.}
 }
 \value{
 a list of shiny tags or character values.
