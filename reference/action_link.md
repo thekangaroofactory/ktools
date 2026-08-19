@@ -9,13 +9,11 @@ links with unique inputId's and same target input.
 action_link(
   id,
   label,
-  icon = NULL,
   target,
   value = NULL,
   namespace = NULL,
   pattern = "action_link",
-  as_character = FALSE,
-  ...
+  as_character = FALSE
 )
 ```
 
@@ -28,10 +26,6 @@ action_link(
 - label:
 
   the label for the actionLink.
-
-- icon:
-
-  an optional icon to pass to the shiny::actionLink() function.
 
 - target:
 
@@ -52,10 +46,6 @@ action_link(
 - as_character:
 
   a logical if the shiny.tag should be returned or a character value.
-
-- ...:
-
-  Named attributes to pass to the shiny::actionLink() function.
 
 ## Value
 
