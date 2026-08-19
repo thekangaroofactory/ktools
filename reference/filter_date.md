@@ -44,14 +44,14 @@ dates belonging to the current month.
 # -- this month (the default)
 filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)))
 #>         date
-#> 1 2026-08-07
-#> 2 2026-08-21
-#> 3 2026-08-18
+#> 1 2026-08-08
+#> 2 2026-08-22
+#> 3 2026-08-19
 
 # -- previous month
 filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)),
 ref = Sys.Date() - as.integer(format(Sys.Date(), "%d")))
 #>         date
-#> 1 2026-07-11
-#> 2 2026-07-01
+#> 1 2026-07-12
+#> 2 2026-07-02
 ```

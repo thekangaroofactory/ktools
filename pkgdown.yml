@@ -3,7 +3,7 @@ pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
   vectorized-actions: vectorized-actions.html
-last_built: 2026-08-18T11:01Z
+last_built: 2026-08-19T12:48Z
 urls:
   reference: https://thekangaroofactory.github.io/ktools/reference
   article: https://thekangaroofactory.github.io/ktools/articles
