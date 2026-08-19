@@ -8,11 +8,13 @@
 #'
 #' @param id a vector or list of ids.
 #' @param label the label for the actionLink.
+#' @param icon an optional icon to pass to the shiny::actionLink() function.
 #' @param target the name of the target input.
 #' @param value an optional value to pass to the target input
 #' @param namespace the namespace function to use.
 #' @param pattern the pattern to generate unique inputId's.
 #' @param as_character a logical if the shiny.tag should be returned or a character value.
+#' @param ... Named attributes to pass to the shiny::actionLink() function.
 #'
 #' @details
 #' The actionLink inputId will be computed based on `ns("pattern_id")` so that it should be unique
@@ -48,7 +50,7 @@
 #'             pattern = "do_this", namespace = "mod1")
 #' }
 
-action_link <- function(id, label, target, value = NULL, namespace = NULL, pattern = "action_link", as_character = FALSE){
+action_link <- function(id, label, icon = NULL, target, value = NULL, namespace = NULL, pattern = "action_link", as_character = FALSE, ...){
 
   # -- namespace (ok when NULL)
   ns <- shiny::NS(namespace)
@@ -58,9 +60,11 @@ action_link <- function(id, label, target, value = NULL, namespace = NULL, patte
 
     a <- shiny::actionLink(inputId = ns(paste0(pattern, "_", x)),
                     label = label,
+                    icon = icon,
                     onclick = onclick_event(target,
                                             value = value,
-                                            namespace = namespace))
+                                            namespace = namespace),
+                    ...)
 
     if(as_character)
       paste(a)

@@ -19,5 +19,10 @@ Useful links:
 \author{
 \strong{Maintainer}: Philippe Peret \email{philippe.peret@hotmail.com} (\href{https://orcid.org/0009-0003-9666-7490}{ORCID}) [copyright holder]
 
+Authors:
+\itemize{
+  \item Philippe Peret \email{philippe.peret@hotmail.com} (\href{https://orcid.org/0009-0003-9666-7490}{ORCID}) [copyright holder]
+}
+
 }
 \keyword{internal}
