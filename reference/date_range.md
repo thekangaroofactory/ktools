@@ -34,7 +34,7 @@ a Date vector c(start, end)
 ``` r
 date_range(min = Sys.Date()-365, max = Sys.Date()+365, type = "this_year")
 #> Warning: 'date_range' is deprecated.
-#> Use 'Use filter_date() instead' instead.
+#> Use 'filter_date()' instead.
 #> See help("Deprecated")
 #> [1] "2026-01-01" "2026-12-31"
 ```

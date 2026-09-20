@@ -12,21 +12,20 @@ filter_date(x, colname = NULL, ref = Sys.Date(), unit = "month")
 
 - x:
 
-  a data.frame with a Date or POSIXct column
+  a data.frame with a Date or POSIXct column.
 
 - colname:
 
-  an optional character string to provide the name of the column to use
-  in filter
+  an optional character string, the name of the column to use in filter.
 
 - ref:
 
-  an optional Date value to be used as a reference for the date range
+  an optional Date value to be used as a reference for the date range.
 
 - unit:
 
   a string to compute the date range (default = "month") (see
-  [round_date](https://lubridate.tidyverse.org/reference/round_date.html))
+  [round_date](https://lubridate.tidyverse.org/reference/round_date.html)).
 
 ## Value
 
@@ -38,20 +37,23 @@ The purpose of this function is to make data navigation between date
 range easier. By default, it will filter the input data.frame to keep
 dates belonging to the current month.
 
+When `colname = NULL` (the default), it will look for a 'date' column in
+x.
+
 ## Examples
 
 ``` r
 # -- this month (the default)
 filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)))
 #>         date
-#> 1 2026-08-08
-#> 2 2026-08-22
-#> 3 2026-08-19
+#> 1 2026-09-09
+#> 2 2026-09-23
+#> 3 2026-09-20
 
 # -- previous month
 filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)),
 ref = Sys.Date() - as.integer(format(Sys.Date(), "%d")))
 #>         date
-#> 1 2026-07-12
-#> 2 2026-07-02
+#> 1 2026-08-13
+#> 2 2026-08-03
 ```
