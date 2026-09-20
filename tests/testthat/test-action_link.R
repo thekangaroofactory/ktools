@@ -26,6 +26,12 @@ test_that("onclick_event works", {
   expect_identical(length(x), 3L)
   expect_identical(attributes(x[[1]])$class, "shiny.tag")
 
+  # -- Send specific value list to the target input:
+  x <- action_link(id = c(1,2,3), label = "click", target = "on_click", value = list(foo = "a"))
+  expect_type(x, "list")
+  expect_identical(length(x), 3L)
+  expect_identical(attributes(x[[1]])$class, "shiny.tag")
+
   # -- Use with Shiny module:
   x <- action_link(id = c(1,2,3), label = "click", target = "on_click", pattern = "do_this", namespace = "mod1")
   expect_type(x, "list")
