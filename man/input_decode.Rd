@@ -10,13 +10,17 @@ input_decode(x)
 \item{x}{the (input) value to decode.}
 }
 \value{
-a named vector c(namespace, action, value) or c(action, value)
+a named vector c(namespace, action, value) or c(action, value).
 }
 \description{
-Split an input value with pattern "namespace-action_value" into a named vector.
+Split an input value into a named vector.
 }
 \details{
-The function is used together with the \code{\link[=action_link]{action_link()}} / \code{\link[=onclick_event]{onclick_event()}} functions.
+The function is used together with the \code{\link[=action_link]{action_link()}} / \code{\link[=onclick_event]{onclick_event()}} functions
+when their value is left to the HTML tag id.
+
+The expected pattern for \code{x} is "namespace-action_value" or "action_value".
+More complex use cases should be covered using a list() value in action_link().
 }
 \examples{
 input_decode("module1-add_leg_896")

@@ -4,45 +4,54 @@
 \alias{onclick_event}
 \title{Build onClick Event}
 \usage{
-onclick_event(target, value = NULL, namespace = NULL)
+onclick_event(target, value = "this.id", namespace = NULL, event = TRUE)
 }
 \arguments{
-\item{target}{the input to update on click}
+\item{target}{the input to update on click.}
 
-\item{value}{the value to send to the input}
+\item{value}{the value to send to the input (see details).}
 
-\item{namespace}{the id of the module to target if so}
+\item{namespace}{the id of the module to target if so.}
+
+\item{event}{should Shiny treat it as an event.}
 }
 \value{
-a string to pass to an onclick parameter
+a character string.
 }
 \description{
-This function helps building onclick instruction for a listener
-to apply / decode.
-This is particularly usefull when working with lists of links, most probably
+This function helps building onclick event to pass complex instructions to
+a given listener.
+This is particularly useful when working with lists of links, most probably
 generated within an apply instruction over a data.frame.
 }
 \details{
 \code{target} defines the name of the input entry to update (i.e. input$target).
 
-When \code{value} is NULL (default), the id of the html tag on which the onClick
-is applied will be sent.
-This enables both strategies:
-\itemize{
-\item send the id of the tag that has been clicked
-\item send an instruction for the target to decode (see examples)
-}
+\code{value} will be passed to the \code{target} input.
+By default, it will send the id of the HTML tag (ex: actionLink, actionButton).
+
+This behavior can be tuned to send a more complex instruction.
+In particular, a list can be passed to the target input (see example).
 }
 \examples{
-# -- basic use case:
+\dontrun{
+# baseline:
 # input$btn_clicked will get the id of the html tag
 onclick_event(target = "btn_clicked")
 
-# -- custom value:
-# input$btn_clicked will get "foo" each time the tag is clicked
+# custom value:
+# input$btn_clicked will get "foo"
 onclick_event(target = "btn_clicked", value = "foo")
 
+# custom list:
+# input$btn_clicked will get the list
+onclick_event(target = "btn_clicked", value = list(a = "foo", b = "bar"))
+
 # -- shiny module:
-# input$btn_clicked inside "module" will get 12 each time the tag is clicked
-onclick_event(target = "btn_clicked", value = 12, namespace = "module")
+# input$btn_clicked inside "module_id" will get 12
+onclick_event(target = "btn_clicked", value = 12, namespace = "module_id")
+}
+}
+\seealso{
+\code{\link[=action_link]{action_link()}}
 }

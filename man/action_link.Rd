@@ -6,12 +6,13 @@
 \usage{
 action_link(
   id,
-  label,
+  pattern = "action_link",
+  label = "",
   icon = NULL,
   target,
-  value = NULL,
+  value = "this.id",
   namespace = NULL,
-  pattern = "action_link",
+  event = TRUE,
   as_character = FALSE,
   ...
 )
@@ -19,57 +20,72 @@ action_link(
 \arguments{
 \item{id}{a vector or list of ids.}
 
-\item{label}{the label for the actionLink.}
+\item{pattern}{the pattern to generate the actionLink ids.}
 
-\item{icon}{an optional icon to pass to the shiny::actionLink() function.}
+\item{label}{the label of the link.}
+
+\item{icon}{an optional icon (passed to \code{\link[shiny:actionLink]{shiny::actionLink()}}).}
 
 \item{target}{the name of the target input.}
 
-\item{value}{an optional value to pass to the target input}
+\item{value}{an optional value to pass to the target input.}
 
-\item{namespace}{the namespace function to use.}
+\item{namespace}{an option character string, for the id of the module.}
 
-\item{pattern}{the pattern to generate unique inputId's.}
+\item{event}{a logical if shiny should treat the click as an event.}
 
 \item{as_character}{a logical if the shiny.tag should be returned or a character value.}
 
 \item{...}{Named attributes to pass to the shiny::actionLink() function.}
 }
 \value{
-a list of shiny tags or character values.
+a list of HTML tags or character values.
 }
 \description{
 Wrapper function around shiny::actionLink() to produce multiple action
-links with unique inputId's and same target input.
+links with unique ids but same target input.
 }
 \details{
-The actionLink inputId will be computed based on \code{ns("pattern_id")} so that it should be unique
-across different module instances.
+The actionLink \code{inputId} will be computed based on \code{namespace}, \code{pattern} and \code{id}
+so that it should be unique across different module instances.
 
-All produced actionLinks will target the same input with different values.
-\code{input$target} will receive the inputId, from which one can extract the source id for example.
+All produced actionLinks will target the same input entry with different values.
+By default, it will send the id of the link, which could be used a character
+string to decode.
 
-If used from the main server, skip \code{namespace}.
+This behavior can be tuned to send a list (see \code{\link[=onclick_event]{onclick_event()}}).
+When \code{value} is a list, the id will be added to that list so that one can detect
+what link was clicked.
+
+When the target input belongs to a shiny module server, the id of the module
+server instance should be passed to \code{namespace}.
 }
 \examples{
 \dontrun{
-# -- basic use case (single actionLink):
+# basic use case (single actionLink):
 action_link(id = "foo", label = "click", target = "on_click")
 
-# -- Send tag id to the target input:
+# Send tag id to the target input:
 # input$on_click will get "action_link_1", "action_link_2", "action_link_3"
 action_link(id = c(1,2,3), label = "click", target = "on_click", value = NULL)
 
-# -- Send specific pattern to the target input:
+# Send specific pattern to the target input:
 # input$on_click will get "do_this_1", "do_this_2" or "do_this_3"
 action_link(id = c(1,2,3), label = "click", target = "on_click", pattern = "do_this")
 
-# -- Send specific value to the target input:
+# Send specific value to the target input:
 # input$on_click will get "do_this" no matter what link is clicked
 action_link(id = c(1,2,3), label = "click", target = "on_click", value = "do_this")
 
-# -- Use with Shiny module:
+# Send a list of values to the target input:
+# input$on_click will get list(a = 1, id = 1) after clicking on the first link
+action_link(id = c(1,2,3), label = "click", target = "on_click", value = list(a = 1))
+
+# Use with Shiny module:
 action_link(id = c(1,2,3), label = "click", target = "on_click",
-            pattern = "do_this", namespace = "mod1")
+            pattern = "do_this", namespace = "module_id")
 }
+}
+\seealso{
+\code{\link[=onclick_event]{onclick_event()}}, \code{\link[shiny:actionLink]{shiny::actionLink()}}
 }

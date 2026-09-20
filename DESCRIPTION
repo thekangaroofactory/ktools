@@ -19,6 +19,7 @@ Imports:
     lubridate,
     htmltools,
     shiny,
+    jsonlite,
     DT
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
