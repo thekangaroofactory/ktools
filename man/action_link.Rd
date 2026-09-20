@@ -39,7 +39,7 @@ action_link(
 \item{...}{Named attributes to pass to the shiny::actionLink() function.}
 }
 \value{
-a list of HTML tags or character values.
+a list or a vector of length 1.
 }
 \description{
 Wrapper function around shiny::actionLink() to produce multiple action

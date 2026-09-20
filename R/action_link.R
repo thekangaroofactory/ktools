@@ -34,7 +34,7 @@
 #'
 #' @seealso [onclick_event()], [shiny::actionLink()]
 #'
-#' @returns a list of HTML tags or character values.
+#' @returns a list or a vector of length 1.
 #' @export
 #'
 #' @examples
@@ -68,19 +68,21 @@ action_link <- function(id, pattern = "action_link", label = "", icon = NULL, ta
   # -- namespace (still works when NULL)
   ns <- shiny::NS(namespace)
 
-  # -- apply over the list of ids
-  lapply(id, function(x){
-
+  # -- helper
+  helper <- function(x){
     a <- shiny::actionLink(inputId = ns(paste0(pattern, "_", x)),
                            label = label,
                            icon = icon,
                            onclick = onclick_event(target, if(is.list(value)) append(value, list(id = x)) else value, namespace, event),
                            ...)
-
     if(as_character)
       paste(a)
-    else a
+    else a}
 
-  })
+  # -- apply helper over the list of ids
+  if(length(id) > 1)
+    lapply(id, helper)
+  else
+    helper(id)
 
 }
