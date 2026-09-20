@@ -7,13 +7,13 @@
 filter_date(x, colname = NULL, ref = Sys.Date(), unit = "month")
 }
 \arguments{
-\item{x}{a data.frame with a Date or POSIXct column}
+\item{x}{a data.frame with a Date or POSIXct column.}
 
-\item{colname}{an optional character string to provide the name of the column to use in filter}
+\item{colname}{an optional character string, the name of the column to use in filter.}
 
-\item{ref}{an optional Date value to be used as a reference for the date range}
+\item{ref}{an optional Date value to be used as a reference for the date range.}
 
-\item{unit}{a string to compute the date range (default = "month") (see \link[lubridate]{round_date})}
+\item{unit}{a string to compute the date range (default = "month") (see \link[lubridate]{round_date}).}
 }
 \value{
 a filtered data.frame
@@ -24,6 +24,8 @@ Filter a data.frame by specific date range.
 \details{
 The purpose of this function is to make data navigation between date range easier.
 By default, it will filter the input data.frame to keep dates belonging to the current month.
+
+When \code{colname = NULL} (the default), it will look for a 'date' column in x.
 }
 \examples{
 # -- this month (the default)

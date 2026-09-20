@@ -20,7 +20,7 @@
 
 date_range <- function(min, max, type = "this_year"){
 
-  .Deprecated(new = "Use filter_date() instead")
+  .Deprecated(new = "filter_date()")
 
   # -- test type
   if(type == "this_year"){

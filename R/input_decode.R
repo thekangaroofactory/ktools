@@ -3,14 +3,18 @@
 #' Decode Input Value
 #'
 #' @description
-#' Split an input value with pattern "namespace-action_value" into a named vector.
+#' Split an input value into a named vector.
 #'
 #' @param x the (input) value to decode.
 #'
 #' @details
-#' The function is used together with the [action_link()] / [onclick_event()] functions.
+#' The function is used together with the [action_link()] / [onclick_event()] functions
+#' when their value is left to the HTML tag id.
 #'
-#' @returns a named vector c(namespace, action, value) or c(action, value)
+#' The expected pattern for `x` is "namespace-action_value" or "action_value".
+#' More complex use cases should be covered using a list() value in action_link().
+#'
+#' @returns a named vector c(namespace, action, value) or c(action, value).
 #' @export
 #'
 #' @examples

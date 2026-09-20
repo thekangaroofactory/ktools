@@ -5,8 +5,7 @@ test_that("onclick_event works", {
   # -- single link
   x <- action_link(id = "foo", label = "click", target = "on_click")
   expect_type(x, "list")
-  expect_identical(length(x), 1L)
-  expect_identical(attributes(x[[1]])$class, "shiny.tag")
+  expect_identical(attributes(x)$class, "shiny.tag")
 
   # -- Send tag id to the target input
   x <- action_link(id = c(1,2,3), label = "click", target = "on_click", value = NULL)
@@ -22,6 +21,12 @@ test_that("onclick_event works", {
 
   # -- Send specific value to the target input:
   x <- action_link(id = c(1,2,3), label = "click", target = "on_click", value = "do_this")
+  expect_type(x, "list")
+  expect_identical(length(x), 3L)
+  expect_identical(attributes(x[[1]])$class, "shiny.tag")
+
+  # -- Send specific value list to the target input:
+  x <- action_link(id = c(1,2,3), label = "click", target = "on_click", value = list(foo = "a"))
   expect_type(x, "list")
   expect_identical(length(x), 3L)
   expect_identical(attributes(x[[1]])$class, "shiny.tag")
