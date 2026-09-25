@@ -36,8 +36,8 @@ use_shiny <- function(path = getwd(), app_dir = "shinyapp", data_dir = NULL, mod
   use_r_environ(path)
 
   # -- Add variables
-  update_r_environ()
-  update_r_environ(key = "PROJECT_HOME", value = path)
+  update_r_environ(path)
+  update_r_environ(path, key = "PROJECT_HOME", value = path)
 
   if(!is.null(data_dir))
     update_r_environ(key = "DATA_HOME", value = data_dir)
