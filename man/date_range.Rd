@@ -2,25 +2,27 @@
 % Please edit documentation in R/date_range.R
 \name{date_range}
 \alias{date_range}
-\title{Compute date range}
+\title{Date Range}
 \usage{
 date_range(min, max, type = "this_year")
 }
 \arguments{
-\item{min}{a Date for the lower value}
+\item{min}{a Date for the lower value.}
 
-\item{max}{a Date for the higher value}
+\item{max}{a Date for the higher value.}
 
-\item{type}{an optional character vector, to set the strategy (default = "this_year")}
+\item{type}{an optional character vector, to set the strategy (default = "this_year").}
 }
 \value{
-a Date vector c(start, end)
+a Date vector c(start, end).
 }
 \description{
-Compute specific date range between two dates.
+Compute specific range between two dates.
 
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
 }
 \examples{
+\dontrun{
 date_range(min = Sys.Date()-365, max = Sys.Date()+365, type = "this_year")
+}
 }
