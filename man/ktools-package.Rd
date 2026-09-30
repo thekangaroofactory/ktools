@@ -6,7 +6,7 @@
 \alias{ktools-package}
 \title{ktools: Utility Tools}
 \description{
-Various utility tools to make (my) life easier. ktools is primarily designed to host functions shared by various other packages and projects.
+Various utility tools to make life easier and homogenize patterns across projects.
 }
 \seealso{
 Useful links:
