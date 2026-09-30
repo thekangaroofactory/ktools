@@ -4,12 +4,11 @@
 # User-interface definition of the Shiny application
 # ------------------------------------------------------------------------------
 
-# -- Define & return UI
 page_navbar(
 
   # -- Footer
-  fillable = FALSE,
-  footer = p(style = "font-size:9pt;margin-top:20px;", "© 2025 Philippe Peret"),
+  # fillable = FALSE,
+  # footer = p(style = "font-size:9pt;margin-top:20px;", "© xxx"),
 
   # -- Header / css
   # header = tags$link(rel = "stylesheet", type = "text/css", href = "./css/style.css"),
@@ -20,7 +19,8 @@ page_navbar(
     fg = "#FFF",
     primary = "orange",
     secondary = "#ececec",
-    base_font = font_google("Quicksand")),
+    # base_font = font_google("xxx")
+    ),
 
   # -- Title
   title = "App Title",
@@ -31,7 +31,6 @@ page_navbar(
 
             # -- content
             p("Something goes here")),
-
 
   # -- Second tab
   nav_panel(title = "Nav_2",

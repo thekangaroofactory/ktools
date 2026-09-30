@@ -4,7 +4,6 @@
 # Server logic of the Shiny application
 # ------------------------------------------------------------------------------
 
-# -- Define server function
 function(input, output, session) {
 
   # --------------------------------------
@@ -19,9 +18,8 @@ function(input, output, session) {
 
 
   # --------------------------------------
-  # Something_cool_goes_here
+  # Your code
   # --------------------------------------
-
 
 
 }

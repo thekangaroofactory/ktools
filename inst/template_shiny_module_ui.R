@@ -11,6 +11,6 @@ module_UI <- function(id) {
   ns <- NS(id)
 
   # -- return
-  wellPanel(textOutput(ns("output")))
+  textOutput(ns("output"))
 
 }

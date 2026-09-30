@@ -6,11 +6,13 @@
 #' The function is meant to wrap shared theme parameters into a function
 #' that can be called within each plot definition.
 #'
-#' @returns a ggplot2 theme
+#' @returns a 'ggplot2' theme.
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' plot_theme()
+#' }
 
 plot_theme <- function(){
 
