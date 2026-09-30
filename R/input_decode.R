@@ -8,11 +8,11 @@
 #' @param x the (input) value to decode.
 #'
 #' @details
-#' The function is used together with the [action_link()] / [onclick_event()] functions
+#' The function is used together with [action_link()] / [onclick_event()]
 #' when their value is left to the HTML tag id.
 #'
 #' The expected pattern for `x` is "namespace-action_value" or "action_value".
-#' More complex use cases should be covered using a list() value in action_link().
+#' More complex use cases should be covered using a list value in [action_link()].
 #'
 #' @returns a named vector c(namespace, action, value) or c(action, value).
 #' @export

@@ -2,24 +2,27 @@
 % Please edit documentation in R/simple_ui.R
 \name{simple_ui}
 \alias{simple_ui}
-\title{Output Shiny UI}
+\title{Shiny Outputs}
 \usage{
 simple_ui(id, output, type = "ui", ...)
 }
 \arguments{
-\item{id}{the id of the module. Can be a vector of ids in case of sub module.}
+\item{id}{the id of the module.}
 
-\item{output}{the name of the output}
+\item{output}{the name of the output.}
 
-\item{type}{the type of output: ui (default), text, plot, table}
+\item{type}{the type of output: "ui" (default), "text", "plot", "table".}
 
-\item{...}{other arguments to pass to the *Output function}
+\item{...}{other arguments to pass to the *Output function.}
 }
 \value{
-the ui object
+an HTML tag.
 }
 \description{
-Basic wrappers around *Output functions
+Wrapper around Shiny *Output functions.
+}
+\details{
+\code{id} can be a vector of ids in case of sub module.
 }
 \examples{
 simple_ui(id = "my_module", output = "my_output")

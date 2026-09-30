@@ -1,16 +1,19 @@
 
 
-#' Output Shiny UI
+#' Shiny Outputs
 #'
 #' @description
-#' Basic wrappers around *Output functions
+#' Wrapper around Shiny *Output functions.
 #'
-#' @param id the id of the module. Can be a vector of ids in case of sub module.
-#' @param output the name of the output
-#' @param type the type of output: ui (default), text, plot, table
-#' @param ... other arguments to pass to the *Output function
+#' @param id the id of the module.
+#' @param output the name of the output.
+#' @param type the type of output: "ui" (default), "text", "plot", "table".
+#' @param ... other arguments to pass to the *Output function.
 #'
-#' @returns the ui object
+#' @details
+#' `id` can be a vector of ids in case of sub module.
+#'
+#' @returns an HTML tag.
 #' @importFrom shiny ns.sep
 #' @importFrom shiny uiOutput
 #' @importFrom shiny plotOutput
