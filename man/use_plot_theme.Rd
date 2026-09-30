@@ -2,19 +2,18 @@
 % Please edit documentation in R/use_plot_theme.R
 \name{use_plot_theme}
 \alias{use_plot_theme}
-\title{Use Plot Theme Function}
+\title{Use Plot Theme}
 \usage{
 use_plot_theme(path = getwd())
 }
 \arguments{
-\item{path}{where to copy the template}
+\item{path}{where to copy the template.}
 }
 \value{
-the output of copy_template()
+a logical.
 }
 \description{
-Helper function to create a theme function that can be used across
-the project.
+Create a theme function that can be used across a project.
 }
 \examples{
 \dontrun{

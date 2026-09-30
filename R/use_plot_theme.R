@@ -1,15 +1,14 @@
 
 
-#' Use Plot Theme Function
+#' Use Plot Theme
 #'
 #' @description
-#' Helper function to create a theme function that can be used across
-#' the project.
+#' Create a theme function that can be used across a project.
 #'
-#' @param path where to copy the template
+#' @param path where to copy the template.
 #'
 #' @export
-#' @return the output of copy_template()
+#' @return a logical.
 #'
 #' @examples
 #' \dontrun{
