@@ -5,9 +5,9 @@
 #' @description
 #' Generates a code report for a given path.
 #'
-#' @param path a path to scan
+#' @param path a path to scan.
 #'
-#' @returns a data.frame with counts for the scanned files
+#' @returns a data.frame.
 #' @export
 #'
 #' @seealso [count_lines()]
