@@ -2,7 +2,7 @@
 % Please edit documentation in R/catl.R
 \name{catl}
 \alias{catl}
-\title{Wrapper Around Cat}
+\title{Conditional Output}
 \usage{
 catl(..., level = 1, debug = Sys.getenv("TRACE_LEVEL"), newline = TRUE)
 }
@@ -16,7 +16,7 @@ catl(..., level = 1, debug = Sys.getenv("TRACE_LEVEL"), newline = TRUE)
 \item{newline}{a logical. If TRUE (default), new line \code{"\n"} will be added}
 }
 \value{
-None (invisible NULL)
+None (invisible NULL).
 }
 \description{
 This wrapper function aims at enabling a trace level mechanism that relies
@@ -30,7 +30,7 @@ The different levels are left flexible.
 
 By default, \code{debug} is set to \code{Sys.getenv("TRACE_LEVEL")}
 If the environment variable is not set, no output will be produced (silent mode)
-When the variable is set, the function will pass calls with level <= debug
+When the variable is set, the function will pass calls with level <= \code{debug}
 to the original \link[base]{cat} function.
 
 The \link[ktools]{trace_level} function can be used to activate a specific trace level.

@@ -7,12 +7,12 @@
 incat(x, sep = "")
 }
 \arguments{
-\item{x}{R objects (see cat function for details)}
+\item{x}{R objects.}
 
 \item{sep}{a character vector of strings to append after each element (default is "").}
 }
 \value{
-None (invisible NULL)
+None (invisible NULL).
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
@@ -22,7 +22,13 @@ When the function detects a direct call (i.e. not from another function), then i
 otherwise it finds the calling function name and print indented output based on callstack position.
 }
 \examples{
-\dontrun{
-incat("This message")
-}
+# default
+incat("direct call")
+
+# call from different levels
+foo <- function() incat("inside foo")
+bar <- function() {incat("inside bar"); foo()}
+
+foo()
+bar()
 }

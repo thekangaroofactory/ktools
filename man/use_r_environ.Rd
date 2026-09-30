@@ -7,16 +7,22 @@
 use_r_environ(path = getwd())
 }
 \arguments{
-\item{path}{the path where to create the file (default set to working directory)}
+\item{path}{the path where to create the file.}
 }
 \value{
-the output of the file.create call
+a logical (see \code{\link[=file.create]{file.create()}})
 }
 \description{
 Create .Renviron File
+}
+\details{
+By default, \code{path} is set to the working directory.
 }
 \examples{
 \dontrun{
 use_r_environ()
 }
+}
+\seealso{
+\code{\link[=update_r_environ]{update_r_environ()}}
 }

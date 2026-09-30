@@ -2,9 +2,14 @@
 
 #' Create .Renviron File
 #'
-#' @param path the path where to create the file (default set to working directory)
+#' @param path the path where to create the file.
 #'
-#' @returns the output of the file.create call
+#' @details
+#' By default, `path` is set to the working directory.
+#'
+#' @seealso [update_r_environ()]
+#'
+#' @returns a logical (see [file.create()])
 #' @export
 #'
 #' @examples
@@ -16,11 +21,8 @@ use_r_environ <- function(path = getwd()){
 
   cat("- Create .Renviron file: ")
 
-  # -- init
-  filename <- file.path(path, ".Renviron")
-
   # -- create file
-  res <- file.create(filename)
+  res <- file.create(file.path(path, ".Renviron"))
 
   # -- check
   if(res)

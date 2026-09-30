@@ -2,22 +2,21 @@
 % Please edit documentation in R/trace_level.R
 \name{trace_level}
 \alias{trace_level}
-\title{Set Trace Level}
+\title{Trace Level}
 \usage{
 trace_level(level = NULL)
 }
 \arguments{
-\item{level}{an integer (or NULL)}
+\item{level}{an integer (or NULL).}
 }
 \value{
 Nothing or the active trace level.
 }
 \description{
-A helper function to set the trace level that will be printed by
-\link[ktools]{catl}
+A helper function to get/set the trace level printed by \code{\link[=catl]{catl()}}.
 }
 \details{
-\code{level} is used to define the level of trace printed by \link[ktools]{catl}.
+\code{level} is used to define the level of trace printed by \code{\link[=catl]{catl()}}.
 Use 0 to set the trace OFF or NULL to get the current trace level.
 }
 \examples{

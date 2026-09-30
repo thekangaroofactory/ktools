@@ -3,27 +3,27 @@
 #' Setup Shiny App
 #'
 #' @description
-#' The function is used to setup a Shiny App with optional module based on templates.
+#' Setup a Shiny App with optional module based on templates.
 #'
 #' `r lifecycle::badge("experimental")`
 #'
-#' @param path the path where to setup the Shiny app (default = working directory)
-#' @param app_dir the name of the app folder (default = "shinyapp")
-#' @param data_dir the path of the data (if any)
-#' @param module if a Shiny module should be created or not (default: FALSE)
+#' @param path the path where to setup the app.
+#' @param app_dir the name of the app folder (default = "shinyapp").
+#' @param data_dir the path to the data (if any).
+#' @param module if a Shiny module should be created or not (default = FALSE).
 #'
 #' @export
-#' @return NULL (invisibly)
+#' @return NULL (invisibly).
 #'
 #' @details
-#' When data_dir is null, DATA_HOME environment variable will not be set.
+#' When `data_dir` is null, the "DATA_HOME" environment variable will not be set.
 #'
 #' @examples
 #' \dontrun{
 #' use_shiny()
 #' }
 
-use_shiny <- function(path = getwd(), app_dir = "shinyapp", data_dir = NULL, module = F){
+use_shiny <- function(path = getwd(), app_dir = "shinyapp", data_dir = NULL, module = FALSE){
 
   cat("Setting up Shiny app \n")
   cat("- Destination folder:", path, "\n")
@@ -65,12 +65,11 @@ use_shiny <- function(path = getwd(), app_dir = "shinyapp", data_dir = NULL, mod
 
   # -- Implement module server / ui from template
   if(module){
-
     dir.create(file.path(path, app_dir, "R", "module"))
     copy_template(template = "template_shiny_module_server.R", filename = "module_server.R", path = file.path(path, app_dir, "R", "module"))
     copy_template(template = "template_shiny_module_ui.R", filename = "module_ui.R", path = file.path(path, app_dir, "R", "module"))}
 
-  #
+  # return
   invisible(NULL)
 
 }

@@ -4,27 +4,32 @@
 \alias{use_shiny}
 \title{Setup Shiny App}
 \usage{
-use_shiny(path = getwd(), app_dir = "shinyapp", data_dir = NULL, module = F)
+use_shiny(
+  path = getwd(),
+  app_dir = "shinyapp",
+  data_dir = NULL,
+  module = FALSE
+)
 }
 \arguments{
-\item{path}{the path where to setup the Shiny app (default = working directory)}
+\item{path}{the path where to setup the app.}
 
-\item{app_dir}{the name of the app folder (default = "shinyapp")}
+\item{app_dir}{the name of the app folder (default = "shinyapp").}
 
-\item{data_dir}{the path of the data (if any)}
+\item{data_dir}{the path to the data (if any).}
 
-\item{module}{if a Shiny module should be created or not (default: FALSE)}
+\item{module}{if a Shiny module should be created or not (default = FALSE).}
 }
 \value{
-NULL (invisibly)
+NULL (invisibly).
 }
 \description{
-The function is used to setup a Shiny App with optional module based on templates.
+Setup a Shiny App with optional module based on templates.
 
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 }
 \details{
-When data_dir is null, DATA_HOME environment variable will not be set.
+When \code{data_dir} is null, the "DATA_HOME" environment variable will not be set.
 }
 \examples{
 \dontrun{
