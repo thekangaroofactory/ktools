@@ -3,18 +3,19 @@
 #' Compute Timestamp
 #'
 #' @description
-#' Compute a numeric timestamp to be used as UUID.
+#' Compute a numeric timestamp.
 #'
-#' @param k a numeric (default = 1000), used as a multiplication factor
-#' @param digits an integer (default = 0) passed to round() function
-#' @param silent an optional (default = FALSE) logical. If TRUE, no traces will go to the console
+#' @param k a numeric (default = 1000), used as a multiplication factor.
+#' @param digits an integer (default = 0) to round the value.
+#' @param silent an optional (default = FALSE) logical. If TRUE, no traces will go to the console.
 #'
 #' @details
-#' The function returns a unique numeric up to the millisecond.
+#' By default (`k = 1000`), the function returns a numeric up to the millisecond.
+#'
 #' Output should not be used as a unique id if users / systems may call it more than
 #' one time per millisecond.
 #'
-#' @return a numeric
+#' @return a numeric.
 #' @export
 #'
 #' @seealso [uuid()]

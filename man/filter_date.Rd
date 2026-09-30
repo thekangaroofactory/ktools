@@ -16,7 +16,7 @@ filter_date(x, colname = NULL, ref = Sys.Date(), unit = "month")
 \item{unit}{a string to compute the date range (default = "month") (see \link[lubridate]{round_date}).}
 }
 \value{
-a filtered data.frame
+a filtered data.frame.
 }
 \description{
 Filter a data.frame by specific date range.

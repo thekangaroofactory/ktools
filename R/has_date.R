@@ -3,12 +3,12 @@
 #' Find Date Column(s)
 #'
 #' @description
-#' Detects Date and/or POSIXct column(s) in a data.frame
+#' Detects Date and/or POSIXct column(s) in a data.frame.
 #'
-#' @param x a data.frame object
-#' @param single a logical (default TRUE) if it should return only the first column
+#' @param x a data.frame object.
+#' @param single a logical (default TRUE) if it should return only the first column.
 #'
-#' @returns the name of the column(s) or NA if no date column is found
+#' @returns the name of the column(s) or NA if no date column is found.
 #' @export
 #'
 #' @examples

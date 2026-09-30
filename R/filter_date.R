@@ -16,7 +16,7 @@
 #'
 #' When `colname = NULL` (the default), it will look for a 'date' column in x.
 #'
-#' @returns a filtered data.frame
+#' @returns a filtered data.frame.
 #' @export
 #'
 #' @examples
