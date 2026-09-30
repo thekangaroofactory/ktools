@@ -1,13 +1,13 @@
 
 
-#' Use Package Function in Do Call
+#' Package Function in Do Call
 #'
 #' @description
 #' Trick to solve the use of :: for package functions in do.call()
 #'
 #' @param x the name of the function, most probably as pkg::fun()
 #'
-#' @return the value of the exported function name in namespace pkg
+#' @return the exported function name in namespace pkg
 #' @export
 #'
 #' @examples
