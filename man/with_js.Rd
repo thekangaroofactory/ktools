@@ -2,35 +2,37 @@
 % Please edit documentation in R/with_js.R
 \name{with_js}
 \alias{with_js}
-\title{Manage Package JavaScript Dependency}
+\title{JavaScript Dependency}
 \usage{
 with_js(package, src, script, session = shiny::getDefaultReactiveDomain())
 }
 \arguments{
-\item{package}{the name of the package}
+\item{package}{the name of the package.}
 
-\item{src}{where to find the script (see htmltools::htmlDependency() for details)}
+\item{src}{where to find the script (see details).}
 
-\item{script}{the script to include (relative to src)}
+\item{script}{the script to include (relative to src).}
 
-\item{session}{the session object of the Shiny server (or shiny::getDefaultReactiveDomain())}
+\item{session}{the session object of the Shiny server.}
 }
 \value{
 NULL (invisibly)
 }
 \description{
 Checks whether a specific dependency is already inserted in the UI with this
-function, and perform the insert if necessary.
+function, and performs the insert if necessary.
 }
 \details{
-The function is designed to be called from another function that creates / updates
-a widget that requires JavaScript so that the user does not need to manage the
-dependency manually.
+The function is designed to be called from another function creating/updating
+a widget that requires JavaScript. With this, the user does not need to manage
+the dependency manually.
 
 When \code{session} is NULL, the function will return without doing anything.
 This is useful when the function is called from ui side. The JavaScript
 dependency will be attached next time the function is called from server side.
 This is because the session$userData object cannot be updated from ui side.
+
+Details about \code{src} can be found in \link\code{\link[htmltools:htmlDependency]{htmltools::htmlDependency()}}.
 }
 \examples{
 \dontrun{
