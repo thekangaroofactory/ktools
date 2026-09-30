@@ -7,17 +7,17 @@
 match.option(fun, arg, value)
 }
 \arguments{
-\item{fun}{the reference of the function, without ()}
+\item{fun}{the reference of the function, without ().}
 
-\item{arg}{the name of the argument to test}
+\item{arg}{the name of the argument to test.}
 
-\item{value}{the value to test}
+\item{value}{the value to test.}
 }
 \value{
-The list of options, including missing ones
+The list of options, including missing ones.
 }
 \description{
-matches a named list against the one expected in function arguments
+Matches a named list against the one expected in function arguments.
 }
 \examples{
 

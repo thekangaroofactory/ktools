@@ -7,19 +7,19 @@
 create_data(colClasses)
 }
 \arguments{
-\item{colClasses}{a named vector of classes to be used to build the data.frame.}
+\item{colClasses}{a named vector of classes.}
 }
 \value{
-a data.frame
+a data.frame.
 }
 \description{
-Builds an empty data.frame from a vector of colClasses.
+Build an empty data.frame from a vector of colClasses.
 }
 \details{
 The names of the vector will be used to name the columns and the values
 to cast the columns to the given classes.
 
-If NA is given as input for colClasses, then read.table() will return
+If \code{NA} is given as input for colClasses, then read.table() will return
 an empty data.frame (0 obs. of 0 variables)
 }
 \examples{

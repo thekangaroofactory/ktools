@@ -4,7 +4,7 @@
 #'
 #' @param x a character vector, or an object that can be coerced to character by as.character.
 #'
-#' @returns a character vector
+#' @returns a character vector.
 #' @export
 #'
 #' @examples
