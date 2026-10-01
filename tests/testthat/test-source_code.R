@@ -13,6 +13,7 @@ test_that("source_code works", {
   expect_true(length(env_after) >= length(env_before))
 
   # -- cleanup environment
-  rm(list = ls())
+  # .Global
+  rm(list = ls(name = sys.frame()), envir = sys.frame())
 
 })
