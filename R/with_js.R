@@ -21,7 +21,7 @@
 #' dependency will be attached next time the function is called from server side.
 #' This is because the session$userData object cannot be updated from ui side.
 #'
-#' Details about `src` can be found in \link[htmltools::htmlDependency()].
+#' Details about `src` can be found in \link[htmltools]{htmlDependency}.
 #'
 #' @importFrom shiny insertUI
 #' @importFrom shiny getDefaultReactiveDomain

@@ -32,7 +32,7 @@ This is useful when the function is called from ui side. The JavaScript
 dependency will be attached next time the function is called from server side.
 This is because the session$userData object cannot be updated from ui side.
 
-Details about \code{src} can be found in \link\code{\link[htmltools:htmlDependency]{htmltools::htmlDependency()}}.
+Details about \code{src} can be found in \link[htmltools]{htmlDependency}.
 }
 \examples{
 \dontrun{
