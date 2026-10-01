@@ -2,26 +2,29 @@
 % Please edit documentation in R/copy_template.R
 \name{copy_template}
 \alias{copy_template}
-\title{Copy Package Template Files}
+\title{Copy Package Template Files.}
 \usage{
 copy_template(template, pkg = "ktools", path = getwd(), filename = NULL)
 }
 \arguments{
-\item{template}{the name of the template file to be copied}
+\item{template}{the name of the template file to be copied.}
 
-\item{pkg}{the name of the package where to find the template (default = ktools)}
+\item{pkg}{the name of the package where to find the template.}
 
-\item{path}{destination path where to copy the template (default = working directory)}
+\item{path}{destination path where to copy the template (default = working directory).}
 
-\item{filename}{the name of the copy (optional)}
+\item{filename}{an optional name for the copy.}
 }
 \value{
-the output of the file.copy function call
+a logical (see \code{\link[=file.copy]{file.copy()}}
 }
 \description{
-Copy Package Template Files
+Copy Package Template Files.
 }
 \details{
+By default, the function addresses templates delivered along with this package
+(i.e. \code{pkg} = "ktools").
+
 When \code{filename} is not provided, the copy will have same name as the template
 without the "template_" prefix pattern.
 

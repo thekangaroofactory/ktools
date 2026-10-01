@@ -12,7 +12,7 @@ match.list(x, reference)
 \item{reference}{a named list to use as a reference.}
 }
 \value{
-a matched list
+a list.
 }
 \description{
 Matches a named list against a reference.
@@ -21,7 +21,8 @@ Matches a named list against a reference.
 The function will drop any element from \code{x} that does not fit with a name
 found in \code{reference} and add missing ones.
 
-It will also check that elements in \code{x} have same classes as matching element in \code{reference}.
+It will also check that elements in \code{x} have same classes as matching
+element in \code{reference}.
 }
 \examples{
 match.list(x = list(foo = 1), reference = list(foo = 0, bar = "dummy"))

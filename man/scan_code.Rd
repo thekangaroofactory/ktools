@@ -7,10 +7,10 @@
 scan_code(path = getwd())
 }
 \arguments{
-\item{path}{a path to scan}
+\item{path}{a path to scan.}
 }
 \value{
-a data.frame with counts for the scanned files
+a data.frame.
 }
 \description{
 Generates a code report for a given path.

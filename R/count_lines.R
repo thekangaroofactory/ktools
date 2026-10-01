@@ -1,14 +1,22 @@
 
 
-#' Count Lines
+#' Code Stats
 #'
 #' @description
-#' Builds a basic code count report.
+#' Builds a basic code counts report.
 #'
-#' @param con a connection object or a character string (passed to \link[base]{readLines})
-#' @param verbose a logical (FALSE by default) if counts should be printed to the console
+#' @param con a connection object or a character string (passed to \link[base]{readLines}).
+#' @param verbose a logical (FALSE by default) if counts should be printed to the console.
 #'
-#' @returns a named vector (total, code, comment, documentation, spacing)
+#' @details
+#' The report will contain the following information:
+#' - total
+#' - code
+#' - comment
+#' - documentation
+#' - spacing
+#'
+#' @returns a named vector.
 #' @export
 #'
 #' @details

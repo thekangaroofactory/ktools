@@ -1,9 +1,9 @@
 
 
-#' Generate uuid
+#' Generate Uuid
 #'
 #' @description
-#' Wrapper around getTimestamp()
+#' Compute unique identifier.
 #'
 #' @details
 #' By default [getTimestamp()] gives a value up to the millisecond.
@@ -14,9 +14,9 @@
 #'
 #' This wrapper calls [getTimestamp()] with `k = 1000000` to get a value up to
 #' the microsecond. This is usually enough the get unique value for example
-#' when it's called from lapply.
+#' when it's called from applying a function over a list.
 #'
-#' @returns a numeric id
+#' @returns a numeric.
 #' @export
 #'
 #' @examples

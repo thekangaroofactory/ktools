@@ -3,13 +3,13 @@
 #' Match Options
 #'
 #' @description
-#' matches a named list against the one expected in function arguments
+#' Matches a named list against the one expected in function arguments.
 #'
-#' @param fun the reference of the function, without ()
-#' @param arg the name of the argument to test
-#' @param value the value to test
+#' @param fun the reference of the function, without ().
+#' @param arg the name of the argument to test.
+#' @param value the value to test.
 #'
-#' @returns The list of options, including missing ones
+#' @returns The list of options, including missing ones.
 #' @export
 #'
 #' @examples

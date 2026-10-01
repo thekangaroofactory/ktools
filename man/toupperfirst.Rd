@@ -10,7 +10,7 @@ toupperfirst(x)
 \item{x}{a character vector, or an object that can be coerced to character by as.character.}
 }
 \value{
-a character vector
+a character vector.
 }
 \description{
 Capitalize First Letter

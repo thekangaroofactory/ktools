@@ -5,22 +5,21 @@
 #' @description
 #' Source all files from a given path.
 #'
-#' @param path a character vector of the path to explore
+#' @param path a character vector of the path to explore.
 #' @param verbose a logical value (default = FALSE). If TRUE, then details
-#' about sourced files will be sent to the console
+#' about sourced files will be sent to the console.
 #'
-#' @return an integer, how many functions have been attached to the environment
+#' @return an integer, how many functions have been attached to the environment.
 #' @export
 #'
 #' @details
-#' Given path is explored using list.files with "*.R" pattern, and recursive = TRUE
-#' All listed files are loaded using source()
+#' Given path is explored with "*.R" extension pattern.
+#' Sub-directories will be explored as well.
 #'
 #' @examples
 #' \dontrun{
 #' source_code("./R")
 #' }
-
 
 source_code <- function(path, verbose = FALSE){
 

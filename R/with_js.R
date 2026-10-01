@@ -1,25 +1,27 @@
 
 
-#' Manage Package JavaScript Dependency
+#' JavaScript Dependency
 #'
 #' @description
 #' Checks whether a specific dependency is already inserted in the UI with this
-#' function, and perform the insert if necessary.
+#' function, and performs the insert if necessary.
 #'
-#' @param session the session object of the Shiny server (or shiny::getDefaultReactiveDomain())
-#' @param package the name of the package
-#' @param src where to find the script (see htmltools::htmlDependency() for details)
-#' @param script the script to include (relative to src)
+#' @param session the session object of the Shiny server.
+#' @param package the name of the package.
+#' @param src where to find the script (see details).
+#' @param script the script to include (relative to src).
 #'
 #' @details
-#' The function is designed to be called from another function that creates / updates
-#' a widget that requires JavaScript so that the user does not need to manage the
-#' dependency manually.
+#' The function is designed to be called from another function creating/updating
+#' a widget that requires JavaScript. With this, the user does not need to manage
+#' the dependency manually.
 #'
 #' When `session` is NULL, the function will return without doing anything.
 #' This is useful when the function is called from ui side. The JavaScript
 #' dependency will be attached next time the function is called from server side.
 #' This is because the session$userData object cannot be updated from ui side.
+#'
+#' Details about `src` can be found in \link[htmltools]{htmlDependency}.
 #'
 #' @importFrom shiny insertUI
 #' @importFrom shiny getDefaultReactiveDomain

@@ -7,20 +7,21 @@
 getTimestamp(k = 1000, digits = 0, silent = FALSE)
 }
 \arguments{
-\item{k}{a numeric (default = 1000), used as a multiplication factor}
+\item{k}{a numeric (default = 1000), used as a multiplication factor.}
 
-\item{digits}{an integer (default = 0) passed to round() function}
+\item{digits}{an integer (default = 0) to round the value.}
 
-\item{silent}{an optional (default = FALSE) logical. If TRUE, no traces will go to the console}
+\item{silent}{an optional (default = FALSE) logical. If TRUE, no traces will go to the console.}
 }
 \value{
-a numeric
+a numeric.
 }
 \description{
-Compute a numeric timestamp to be used as UUID.
+Compute a numeric timestamp.
 }
 \details{
-The function returns a unique numeric up to the millisecond.
+By default (\code{k = 1000}), the function returns a numeric up to the millisecond.
+
 Output should not be used as a unique id if users / systems may call it more than
 one time per millisecond.
 }

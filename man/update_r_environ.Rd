@@ -2,25 +2,28 @@
 % Please edit documentation in R/update_r_environ.R
 \name{update_r_environ}
 \alias{update_r_environ}
-\title{Update Renviron File}
+\title{Update .Renviron File}
 \usage{
-update_r_environ(path = getwd(), key = "DEBUG", value = "TRUE")
+update_r_environ(path = getwd(), key, value)
 }
 \arguments{
-\item{path}{the path of the .Renviron file (default is working directory)}
+\item{path}{the path to the .Renviron file (default is working directory).}
 
-\item{key}{the name of the variable (default = DEBUG)}
+\item{key}{a character string for the name of the variable.}
 
-\item{value}{the value to be assigned to the variable (default = "TRUE")}
+\item{value}{the value to be assigned to the variable.}
 }
 \value{
-TRUE if success, else FALSE
+a logical (TRUE if success, else FALSE)
 }
 \description{
-The function adds a variable to the project .Renviron file.
+Add an environment variable to the project.
 }
 \examples{
 \dontrun{
 update_r_environ(key = "MY_VAR", value = "my_value")
 }
+}
+\seealso{
+\code{\link[=use_r_environ]{use_r_environ()}}
 }

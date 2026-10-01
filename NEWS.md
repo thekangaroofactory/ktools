@@ -1,3 +1,13 @@
+
+# ktools 0.9.10
+
+The revision mostly covers convergence activity to support first CRAN submission.
+
+- Documentation review
+- Cleanup
+- R-CDM check fails on linux during r-universe build #100
+
+
 # ktools 0.9.9
 
 ## New functions / features:
@@ -7,7 +17,6 @@
 - Implement use plot theme function #65
 
 ## Improvements:
-- use_shiny function should be reviewed #69
 - copy_template should allow file rename #70
 - Copy_template function should take the package as an argument #71
 - [filter_date] The function needs to check for missing date column #78
@@ -94,7 +103,6 @@
 
 ## Improvements:
 
-- [use_shiny] Check data_dir parameter to skip data folder
 - [catl] Replace trace option by environment variable
 - source_code()
 
@@ -108,7 +116,6 @@
 ## New functions / features:
 
 - copy_template()
-- use_shiny()
 - templates: global.R, shiny server, shiny navbar ui, shiny module server & ui
 
 # ktools 0.9.1-beta

@@ -21,7 +21,6 @@ reference:
   - use_r_environ
   - update_r_environ
   - copy_template
-  - use_shiny
 
 - title: Environment, traces & debug
   desc:

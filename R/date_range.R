@@ -1,21 +1,23 @@
 
 
-#' Compute date range
+#' Date Range
 #'
 #' @description
-#' Compute specific date range between two dates.
+#' Compute specific range between two dates.
 #'
 #' `r lifecycle::badge('deprecated')`
 #'
-#' @param min a Date for the lower value
-#' @param max a Date for the higher value
-#' @param type an optional character vector, to set the strategy (default = "this_year")
+#' @param min a Date for the lower value.
+#' @param max a Date for the higher value.
+#' @param type an optional character vector, to set the strategy (default = "this_year").
 #'
-#' @return a Date vector c(start, end)
+#' @return a Date vector c(start, end).
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' date_range(min = Sys.Date()-365, max = Sys.Date()+365, type = "this_year")
+#' }
 
 
 date_range <- function(min, max, type = "this_year"){

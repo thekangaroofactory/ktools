@@ -1,6 +1,6 @@
 
 
-#' Wrapper Around Cat
+#' Conditional Output
 #'
 #' @description
 #' This wrapper function aims at enabling a trace level mechanism that relies
@@ -19,12 +19,12 @@
 #'
 #' By default, \code{debug} is set to \code{Sys.getenv("TRACE_LEVEL")}
 #' If the environment variable is not set, no output will be produced (silent mode)
-#' When the variable is set, the function will pass calls with level <= debug
+#' When the variable is set, the function will pass calls with level <= `debug`
 #' to the original \link[base]{cat} function.
 #'
 #' The \link[ktools]{trace_level} function can be used to activate a specific trace level.
 #'
-#' @return None (invisible NULL)
+#' @return None (invisible NULL).
 #' @export
 #'
 #' @examples

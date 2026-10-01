@@ -2,15 +2,15 @@
 % Please edit documentation in R/uuid.R
 \name{uuid}
 \alias{uuid}
-\title{Generate uuid}
+\title{Generate Uuid}
 \usage{
 uuid()
 }
 \value{
-a numeric id
+a numeric.
 }
 \description{
-Wrapper around getTimestamp()
+Compute unique identifier.
 }
 \details{
 By default \code{\link[=getTimestamp]{getTimestamp()}} gives a value up to the millisecond.
@@ -21,7 +21,7 @@ millisecond.
 
 This wrapper calls \code{\link[=getTimestamp]{getTimestamp()}} with \code{k = 1000000} to get a value up to
 the microsecond. This is usually enough the get unique value for example
-when it's called from lapply.
+when it's called from applying a function over a list.
 }
 \examples{
 uuid()

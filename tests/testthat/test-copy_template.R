@@ -6,8 +6,8 @@ test_that("copy_template works", {
   testdata_path <- create_folder()
 
   # -- function calls
-  expect_no_error(copy_template(template = "global.R", pkg = "ktools", path = testdata_path))
-  expect_true(file.exists(file.path(testdata_path, "global.R")))
+  expect_no_error(copy_template(template = "template_plot_theme.R", pkg = "ktools", path = testdata_path))
+  expect_true(file.exists(file.path(testdata_path, "plot_theme.R")))
 
   # -- delete folder
   clean_all(testdata_path)

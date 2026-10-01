@@ -12,9 +12,10 @@
 #' The function will drop any element from `x` that does not fit with a name
 #' found in `reference` and add missing ones.
 #'
-#' It will also check that elements in `x` have same classes as matching element in `reference`.
+#' It will also check that elements in `x` have same classes as matching
+#' element in `reference`.
 #'
-#' @returns a matched list
+#' @returns a list.
 #' @export
 #'
 #' @examples

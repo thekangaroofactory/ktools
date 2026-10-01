@@ -2,22 +2,18 @@
 % Please edit documentation in R/seq_timestamp.R
 \name{seq_timestamp}
 \alias{seq_timestamp}
-\title{Generate a sequence of timestamps}
+\title{Sequence of Timestamps}
 \usage{
 seq_timestamp(n = 2)
 }
 \arguments{
-\item{n}{an integer representing the desired output vector length (see details)}
+\item{n}{the desired output vector length.}
 }
 \value{
-a numeric vector of timestamps
+a numeric vector of timestamps.
 }
 \description{
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#deprecated}{\figure{lifecycle-deprecated.svg}{options: alt='[Deprecated]'}}}{\strong{[Deprecated]}}
-}
-\details{
-n is expected to receive an integer. If a decimal value is provided, then round()
-will be used, which means that 2.8 will return a length 3 vector.
 }
 \examples{
 \dontrun{

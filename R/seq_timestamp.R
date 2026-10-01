@@ -1,22 +1,17 @@
 
 
-#' Generate a sequence of timestamps
+#' Sequence of Timestamps
 #'
 #' `r lifecycle::badge("deprecated")`
 #'
-#' @param n an integer representing the desired output vector length (see details)
+#' @param n the desired output vector length.
 #'
-#' @return a numeric vector of timestamps
+#' @return a numeric vector of timestamps.
 #' @export
-#'
-#' @details
-#' n is expected to receive an integer. If a decimal value is provided, then round()
-#' will be used, which means that 2.8 will return a length 3 vector.
 #'
 #' @examples
 #' \dontrun{
 #' seq_timestamp(n = 2)}
-
 
 seq_timestamp <- function(n = 2){
 

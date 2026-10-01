@@ -1,15 +1,14 @@
 
 
-#' Set Trace Level
+#' Trace Level
 #'
 #' @description
-#' A helper function to set the trace level that will be printed by
-#' \link[ktools]{catl}
+#' A helper function to get/set the trace level printed by [catl()].
 #'
-#' @param level an integer (or NULL)
+#' @param level an integer (or NULL).
 #'
 #' @details
-#' `level` is used to define the level of trace printed by \link[ktools]{catl}.
+#' `level` is used to define the level of trace printed by [catl()].
 #' Use 0 to set the trace OFF or NULL to get the current trace level.
 #'
 #' @seealso [catl()]

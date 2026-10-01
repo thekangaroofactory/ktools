@@ -4,21 +4,26 @@
 #'
 #' `r lifecycle::badge("experimental")`
 #'
-#' @param x R objects (see cat function for details)
+#' @param x R objects.
 #' @param sep a character vector of strings to append after each element (default is "").
 #'
 #' @export
-#' @return None (invisible NULL)
+#' @return None (invisible NULL).
 #'
 #' @details
 #' When the function detects a direct call (i.e. not from another function), then it basically just do cat
 #' otherwise it finds the calling function name and print indented output based on callstack position.
 #'
 #' @examples
-#' \dontrun{
-#' incat("This message")
-#' }
-
+#' # default
+#' incat("direct call")
+#'
+#' # call from different levels
+#' foo <- function() incat("inside foo")
+#' bar <- function() {incat("inside bar"); foo()}
+#'
+#' foo()
+#' bar()
 
 incat <- function(x, sep = ""){
 

@@ -16,11 +16,11 @@ a named vector c(namespace, action, value) or c(action, value).
 Split an input value into a named vector.
 }
 \details{
-The function is used together with the \code{\link[=action_link]{action_link()}} / \code{\link[=onclick_event]{onclick_event()}} functions
+The function is used together with \code{\link[=action_link]{action_link()}} / \code{\link[=onclick_event]{onclick_event()}}
 when their value is left to the HTML tag id.
 
 The expected pattern for \code{x} is "namespace-action_value" or "action_value".
-More complex use cases should be covered using a list() value in action_link().
+More complex use cases should be covered using a list value in \code{\link[=action_link]{action_link()}}.
 }
 \examples{
 input_decode("module1-add_leg_896")

@@ -7,15 +7,15 @@
 has_date(x, single = TRUE)
 }
 \arguments{
-\item{x}{a data.frame object}
+\item{x}{a data.frame object.}
 
-\item{single}{a logical (default TRUE) if it should return only the first column}
+\item{single}{a logical (default TRUE) if it should return only the first column.}
 }
 \value{
-the name of the column(s) or NA if no date column is found
+the name of the column(s) or NA if no date column is found.
 }
 \description{
-Detects Date and/or POSIXct column(s) in a data.frame
+Detects Date and/or POSIXct column(s) in a data.frame.
 }
 \examples{
 has_date(data.frame(date = Sys.Date()))
