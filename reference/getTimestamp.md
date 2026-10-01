@@ -44,11 +44,11 @@ more than one time per millisecond.
 ``` r
 # compute up to the second timestamp
 getTimestamp(k = 1, digits = 0)
-#> [1] 1790869719
+#> [1] 1790875567
 
 # compute up to the millisecond timestamp
 getTimestamp(k = 1000)
-#> [1] 1.79087e+12
+#> [1] 1.790876e+12
 getTimestamp()
-#> [1] 1.79087e+12
+#> [1] 1.790876e+12
 ```

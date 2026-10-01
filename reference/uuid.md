@@ -32,7 +32,7 @@ function over a list.
 
 ``` r
 uuid()
-#> [1] 1.79087e+15
+#> [1] 1.790876e+15
 
 # showing what the function is trying to solve
 any(duplicated(replicate(100, getTimestamp())))
