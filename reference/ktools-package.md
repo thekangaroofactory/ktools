@@ -1,7 +1,6 @@
 # ktools: Utility Tools
 
-Various utility tools to make (my) life easier. ktools is primarily
-designed to host functions shared by various other packages and
+Various utility tools to make life easier and homogenize patterns across
 projects.
 
 ## See also

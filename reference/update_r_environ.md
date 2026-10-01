@@ -1,30 +1,34 @@
-# Update Renviron File
+# Update .Renviron File
 
-The function adds a variable to the project .Renviron file.
+Add an environment variable to the project.
 
 ## Usage
 
 ``` r
-update_r_environ(path = getwd(), key = "DEBUG", value = "TRUE")
+update_r_environ(path = getwd(), key, value)
 ```
 
 ## Arguments
 
 - path:
 
-  the path of the .Renviron file (default is working directory)
+  the path to the .Renviron file (default is working directory).
 
 - key:
 
-  the name of the variable (default = DEBUG)
+  a character string for the name of the variable.
 
 - value:
 
-  the value to be assigned to the variable (default = "TRUE")
+  the value to be assigned to the variable.
 
 ## Value
 
-TRUE if success, else FALSE
+a logical (TRUE if success, else FALSE)
+
+## See also
+
+[`use_r_environ()`](https://thekangaroofactory.github.io/ktools/reference/use_r_environ.md)
 
 ## Examples
 

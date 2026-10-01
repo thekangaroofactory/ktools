@@ -1,6 +1,6 @@
 # Create Data
 
-Builds an empty data.frame from a vector of colClasses.
+Build an empty data.frame from a vector of colClasses.
 
 ## Usage
 
@@ -12,19 +12,19 @@ create_data(colClasses)
 
 - colClasses:
 
-  a named vector of classes to be used to build the data.frame.
+  a named vector of classes.
 
 ## Value
 
-a data.frame
+a data.frame.
 
 ## Details
 
 The names of the vector will be used to name the columns and the values
 to cast the columns to the given classes.
 
-If NA is given as input for colClasses, then read.table() will return an
-empty data.frame (0 obs. of 0 variables)
+If `NA` is given as input for colClasses, then read.table() will return
+an empty data.frame (0 obs. of 0 variables)
 
 ## Examples
 

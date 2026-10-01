@@ -1,4 +1,4 @@
-# Wrapper Around Cat
+# Conditional Output
 
 This wrapper function aims at enabling a trace level mechanism that
 relies on the [cat](https://rdrr.io/r/base/cat.html) function.
@@ -30,7 +30,7 @@ catl(..., level = 1, debug = Sys.getenv("TRACE_LEVEL"), newline = TRUE)
 
 ## Value
 
-None (invisible NULL)
+None (invisible NULL).
 
 ## Details
 
@@ -43,7 +43,7 @@ The different levels are left flexible.
 By default, `debug` is set to `Sys.getenv("TRACE_LEVEL")` If the
 environment variable is not set, no output will be produced (silent
 mode) When the variable is set, the function will pass calls with level
-\<= debug to the original [cat](https://rdrr.io/r/base/cat.html)
+\<= `debug` to the original [cat](https://rdrr.io/r/base/cat.html)
 function.
 
 The

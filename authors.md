@@ -9,15 +9,15 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/thekangaroofactory/ktools/blob/v0.9.9/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/thekangaroofactory/ktools/blob/master/DESCRIPTION)
 
-Peret P (2026). *ktools: Utility Tools*. R package version 0.9.9,
+Peret P (2026). *ktools: Utility Tools*. R package version 0.9.10,
 <https://thekangaroofactory.github.io/ktools/>.
 
     @Manual{,
       title = {ktools: Utility Tools},
       author = {Philippe Peret},
       year = {2026},
-      note = {R package version 0.9.9},
+      note = {R package version 0.9.10},
       url = {https://thekangaroofactory.github.io/ktools/},
     }

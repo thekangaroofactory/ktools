@@ -12,7 +12,7 @@ incat(x, sep = "")
 
 - x:
 
-  R objects (see cat function for details)
+  R objects.
 
 - sep:
 
@@ -21,7 +21,7 @@ incat(x, sep = "")
 
 ## Value
 
-None (invisible NULL)
+None (invisible NULL).
 
 ## Details
 
@@ -32,7 +32,17 @@ function name and print indented output based on callstack position.
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
-incat("This message")
-} # }
+# default
+incat("direct call")
+#>                                                                                                 [eval] direct call
+
+# call from different levels
+foo <- function() incat("inside foo")
+bar <- function() {incat("inside bar"); foo()}
+
+foo()
+#>                                                                                                    [foo()] inside foo
+bar()
+#>                                                                                                    [bar()] inside bar
+#>                                                                                                       [foo()] inside foo
 ```

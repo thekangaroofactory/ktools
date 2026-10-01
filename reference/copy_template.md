@@ -1,6 +1,6 @@
-# Copy Package Template Files
+# Copy Package Template Files.
 
-Copy Package Template Files
+Copy Package Template Files.
 
 ## Usage
 
@@ -12,26 +12,29 @@ copy_template(template, pkg = "ktools", path = getwd(), filename = NULL)
 
 - template:
 
-  the name of the template file to be copied
+  the name of the template file to be copied.
 
 - pkg:
 
-  the name of the package where to find the template (default = ktools)
+  the name of the package where to find the template.
 
 - path:
 
   destination path where to copy the template (default = working
-  directory)
+  directory).
 
 - filename:
 
-  the name of the copy (optional)
+  an optional name for the copy.
 
 ## Value
 
-the output of the file.copy function call
+a logical (see [`file.copy()`](https://rdrr.io/r/base/files.html)
 
 ## Details
+
+By default, the function addresses templates delivered along with this
+package (i.e. `pkg` = "ktools").
 
 When `filename` is not provided, the copy will have same name as the
 template without the "template\_" prefix pattern.

@@ -12,11 +12,11 @@ scan_code(path = getwd())
 
 - path:
 
-  a path to scan
+  a path to scan.
 
 ## Value
 
-a data.frame with counts for the scanned files
+a data.frame.
 
 ## See also
 

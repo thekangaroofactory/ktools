@@ -29,7 +29,7 @@ filter_date(x, colname = NULL, ref = Sys.Date(), unit = "month")
 
 ## Value
 
-a filtered data.frame
+a filtered data.frame.
 
 ## Details
 
@@ -46,14 +46,13 @@ x.
 # -- this month (the default)
 filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)))
 #>         date
-#> 1 2026-09-12
-#> 2 2026-09-26
-#> 3 2026-09-23
+#> 1 2026-10-04
+#> 2 2026-10-01
+#> 3 2026-10-22
 
 # -- previous month
 filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)),
 ref = Sys.Date() - as.integer(format(Sys.Date(), "%d")))
-#>         date
-#> 1 2026-08-16
-#> 2 2026-08-06
+#> [1] date
+#> <0 rows> (or 0-length row.names)
 ```

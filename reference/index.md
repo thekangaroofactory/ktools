@@ -7,22 +7,20 @@ These functions are meant to homogenize practices across projects.
 - [`use_r_environ()`](https://thekangaroofactory.github.io/ktools/reference/use_r_environ.md)
   : Create .Renviron File
 - [`update_r_environ()`](https://thekangaroofactory.github.io/ktools/reference/update_r_environ.md)
-  : Update Renviron File
+  : Update .Renviron File
 - [`copy_template()`](https://thekangaroofactory.github.io/ktools/reference/copy_template.md)
-  : Copy Package Template Files
-- [`use_shiny()`](https://thekangaroofactory.github.io/ktools/reference/use_shiny.md)
-  **\[experimental\]** : Setup Shiny App
+  : Copy Package Template Files.
 
 ## Environment, traces & debug
 
 - [`catl()`](https://thekangaroofactory.github.io/ktools/reference/catl.md)
-  : Wrapper Around Cat
+  : Conditional Output
 - [`trace_level()`](https://thekangaroofactory.github.io/ktools/reference/trace_level.md)
-  : Set Trace Level
+  : Trace Level
 - [`incat()`](https://thekangaroofactory.github.io/ktools/reference/incat.md)
   **\[experimental\]** : Indented Cat
 - [`count_lines()`](https://thekangaroofactory.github.io/ktools/reference/count_lines.md)
-  : Count Lines
+  : Code Stats
 - [`scan_code()`](https://thekangaroofactory.github.io/ktools/reference/scan_code.md)
   : Scan Code
 - [`source_code()`](https://thekangaroofactory.github.io/ktools/reference/source_code.md)
@@ -33,7 +31,7 @@ These functions are meant to homogenize practices across projects.
 - [`getTimestamp()`](https://thekangaroofactory.github.io/ktools/reference/getTimestamp.md)
   : Compute Timestamp
 - [`uuid()`](https://thekangaroofactory.github.io/ktools/reference/uuid.md)
-  : Generate uuid
+  : Generate Uuid
 - [`has_date()`](https://thekangaroofactory.github.io/ktools/reference/has_date.md)
   : Find Date Column(s)
 - [`filter_date()`](https://thekangaroofactory.github.io/ktools/reference/filter_date.md)
@@ -55,12 +53,12 @@ These functions are meant to homogenize practices across projects.
 ## Plots
 
 - [`use_plot_theme()`](https://thekangaroofactory.github.io/ktools/reference/use_plot_theme.md)
-  : Use Plot Theme Function
+  : Use Plot Theme
 
 ## Shiny
 
 - [`simple_ui()`](https://thekangaroofactory.github.io/ktools/reference/simple_ui.md)
-  : Output Shiny UI
+  : Shiny Outputs
 - [`onclick_event()`](https://thekangaroofactory.github.io/ktools/reference/onclick_event.md)
   : Build onClick Event
 - [`action_link()`](https://thekangaroofactory.github.io/ktools/reference/action_link.md)
@@ -71,16 +69,16 @@ These functions are meant to homogenize practices across projects.
 ## Javascript
 
 - [`with_js()`](https://thekangaroofactory.github.io/ktools/reference/with_js.md)
-  : Manage Package JavaScript Dependency
+  : JavaScript Dependency
 
 ## Miscellaneous
 
 - [`getNsFunction()`](https://thekangaroofactory.github.io/ktools/reference/getNsFunction.md)
-  : Use Package Function in Do Call
+  : Package Function in Do Call
 
 ## Deprecated functions
 
 - [`seq_timestamp()`](https://thekangaroofactory.github.io/ktools/reference/seq_timestamp.md)
-  **\[deprecated\]** : Generate a sequence of timestamps
+  **\[deprecated\]** : Sequence of Timestamps
 - [`date_range()`](https://thekangaroofactory.github.io/ktools/reference/date_range.md)
-  **\[deprecated\]** : Compute date range
+  **\[deprecated\]** : Date Range

@@ -12,21 +12,21 @@ source_code(path, verbose = FALSE)
 
 - path:
 
-  a character vector of the path to explore
+  a character vector of the path to explore.
 
 - verbose:
 
   a logical value (default = FALSE). If TRUE, then details about sourced
-  files will be sent to the console
+  files will be sent to the console.
 
 ## Value
 
-an integer, how many functions have been attached to the environment
+an integer, how many functions have been attached to the environment.
 
 ## Details
 
-Given path is explored using list.files with "\*.R" pattern, and
-recursive = TRUE All listed files are loaded using source()
+Given path is explored with "\*.R" extension pattern. Sub-directories
+will be explored as well.
 
 ## Examples
 

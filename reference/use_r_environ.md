@@ -12,11 +12,19 @@ use_r_environ(path = getwd())
 
 - path:
 
-  the path where to create the file (default set to working directory)
+  the path where to create the file.
 
 ## Value
 
-the output of the file.create call
+a logical (see [`file.create()`](https://rdrr.io/r/base/files.html))
+
+## Details
+
+By default, `path` is set to the working directory.
+
+## See also
+
+[`update_r_environ()`](https://thekangaroofactory.github.io/ktools/reference/update_r_environ.md)
 
 ## Examples
 

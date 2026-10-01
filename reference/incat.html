@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">ktools</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9.9</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9.10</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Indented Cat</h1>
-      <small class="dont-index">Source: <a href="https://github.com/thekangaroofactory/ktools/blob/v0.9.9/R/incat.R" class="external-link"><code>R/incat.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/thekangaroofactory/ktools/blob/master/R/incat.R" class="external-link"><code>R/incat.R</code></a></small>
       <div class="d-none name"><code>incat.Rd</code></div>
     </div>
 
@@ -54,7 +54,7 @@
 
 
 <dl><dt id="arg-x">x<a class="anchor" aria-label="anchor" href="#arg-x"></a></dt>
-<dd><p>R objects (see cat function for details)</p></dd>
+<dd><p>R objects.</p></dd>
 
 
 <dt id="arg-sep">sep<a class="anchor" aria-label="anchor" href="#arg-sep"></a></dt>
@@ -63,7 +63,7 @@
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>None (invisible NULL)</p>
+    <p>None (invisible NULL).</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -73,9 +73,19 @@ otherwise it finds the calling function name and print indented output based on 
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
-<span class="r-in"><span><span class="fu">incat</span><span class="op">(</span><span class="st">"This message"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># default</span></span></span>
+<span class="r-in"><span><span class="fu">incat</span><span class="op">(</span><span class="st">"direct call"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                 [eval] direct call</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># call from different levels</span></span></span>
+<span class="r-in"><span><span class="va">foo</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="fu">incat</span><span class="op">(</span><span class="st">"inside foo"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="va">bar</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="op">)</span> <span class="op">{</span><span class="fu">incat</span><span class="op">(</span><span class="st">"inside bar"</span><span class="op">)</span>; <span class="fu">foo</span><span class="op">(</span><span class="op">)</span><span class="op">}</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">foo</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                    [foo()] inside foo</span>
+<span class="r-in"><span><span class="fu">bar</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                    [bar()] inside bar</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                       [foo()] inside foo</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

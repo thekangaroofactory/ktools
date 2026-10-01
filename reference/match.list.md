@@ -20,7 +20,7 @@ match.list(x, reference)
 
 ## Value
 
-a matched list
+a list.
 
 ## Details
 

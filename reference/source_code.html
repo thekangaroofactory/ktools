@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">ktools</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9.9</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.9.10</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Source Code</h1>
-      <small class="dont-index">Source: <a href="https://github.com/thekangaroofactory/ktools/blob/v0.9.9/R/source_code.R" class="external-link"><code>R/source_code.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/thekangaroofactory/ktools/blob/master/R/source_code.R" class="external-link"><code>R/source_code.R</code></a></small>
       <div class="d-none name"><code>source_code.Rd</code></div>
     </div>
 
@@ -54,22 +54,22 @@
 
 
 <dl><dt id="arg-path">path<a class="anchor" aria-label="anchor" href="#arg-path"></a></dt>
-<dd><p>a character vector of the path to explore</p></dd>
+<dd><p>a character vector of the path to explore.</p></dd>
 
 
 <dt id="arg-verbose">verbose<a class="anchor" aria-label="anchor" href="#arg-verbose"></a></dt>
 <dd><p>a logical value (default = FALSE). If TRUE, then details
-about sourced files will be sent to the console</p></dd>
+about sourced files will be sent to the console.</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>an integer, how many functions have been attached to the environment</p>
+    <p>an integer, how many functions have been attached to the environment.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
-    <p>Given path is explored using list.files with "*.R" pattern, and recursive = TRUE
-All listed files are loaded using source()</p>
+    <p>Given path is explored with "*.R" extension pattern.
+Sub-directories will be explored as well.</p>
     </div>
 
     <div class="section level2">

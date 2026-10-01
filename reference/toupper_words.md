@@ -12,16 +12,16 @@ toupper_words(s, strict = FALSE)
 
 - s:
 
-  a character string
+  a character string.
 
 - strict:
 
   a logical (default = FALSE) if other characters should be forced to
-  lower
+  lower.
 
 ## Value
 
-a character string
+a character string.
 
 ## Examples
 

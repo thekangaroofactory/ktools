@@ -17,7 +17,7 @@ toupperfirst(x)
 
 ## Value
 
-a character vector
+a character vector.
 
 ## Examples
 

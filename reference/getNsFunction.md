@@ -1,4 +1,4 @@
-# Use Package Function in Do Call
+# Package Function in Do Call
 
 Trick to solve the use of :: for package functions in do.call()
 
@@ -16,7 +16,7 @@ getNsFunction(x)
 
 ## Value
 
-the value of the exported function name in namespace pkg
+the exported function name in namespace pkg
 
 ## Examples
 

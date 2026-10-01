@@ -1,6 +1,6 @@
 # Match Options
 
-matches a named list against the one expected in function arguments
+Matches a named list against the one expected in function arguments.
 
 ## Usage
 
@@ -12,19 +12,19 @@ match.option(fun, arg, value)
 
 - fun:
 
-  the reference of the function, without ()
+  the reference of the function, without ().
 
 - arg:
 
-  the name of the argument to test
+  the name of the argument to test.
 
 - value:
 
-  the value to test
+  the value to test.
 
 ## Value
 
-The list of options, including missing ones
+The list of options, including missing ones.
 
 ## Examples
 

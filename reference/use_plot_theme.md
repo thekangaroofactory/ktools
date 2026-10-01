@@ -1,7 +1,6 @@
-# Use Plot Theme Function
+# Use Plot Theme
 
-Helper function to create a theme function that can be used across the
-project.
+Create a theme function that can be used across a project.
 
 ## Usage
 
@@ -13,11 +12,11 @@ use_plot_theme(path = getwd())
 
 - path:
 
-  where to copy the template
+  where to copy the template.
 
 ## Value
 
-the output of copy_template()
+a logical.
 
 ## Examples
 

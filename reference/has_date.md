@@ -1,6 +1,6 @@
 # Find Date Column(s)
 
-Detects Date and/or POSIXct column(s) in a data.frame
+Detects Date and/or POSIXct column(s) in a data.frame.
 
 ## Usage
 
@@ -12,15 +12,15 @@ has_date(x, single = TRUE)
 
 - x:
 
-  a data.frame object
+  a data.frame object.
 
 - single:
 
-  a logical (default TRUE) if it should return only the first column
+  a logical (default TRUE) if it should return only the first column.
 
 ## Value
 
-the name of the column(s) or NA if no date column is found
+the name of the column(s) or NA if no date column is found.
 
 ## Examples
 

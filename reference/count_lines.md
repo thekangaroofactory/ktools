@@ -1,6 +1,6 @@
-# Count Lines
+# Code Stats
 
-Builds a basic code count report.
+Builds a basic code counts report.
 
 ## Usage
 
@@ -13,18 +13,30 @@ count_lines(con, verbose = FALSE)
 - con:
 
   a connection object or a character string (passed to
-  [readLines](https://rdrr.io/r/base/readLines.html))
+  [readLines](https://rdrr.io/r/base/readLines.html)).
 
 - verbose:
 
   a logical (FALSE by default) if counts should be printed to the
-  console
+  console.
 
 ## Value
 
-a named vector (total, code, comment, documentation, spacing)
+a named vector.
 
 ## Details
+
+The report will contain the following information:
+
+- total
+
+- code
+
+- comment
+
+- documentation
+
+- spacing
 
 Code lines ending with a comment are counted as code lines (hence
 ignored from comments).
