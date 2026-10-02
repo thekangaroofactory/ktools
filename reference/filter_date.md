@@ -46,9 +46,9 @@ x.
 # -- this month (the default)
 filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)))
 #>         date
-#> 1 2026-10-04
-#> 2 2026-10-01
-#> 3 2026-10-22
+#> 1 2026-10-05
+#> 2 2026-10-02
+#> 3 2026-10-23
 
 # -- previous month
 filter_date(data.frame(date = Sys.Date() - runif(n = 10, min = -50, max = 50)),
