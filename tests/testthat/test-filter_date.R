@@ -3,17 +3,24 @@
 test_that("filter_date works", {
 
   # -- default use case: this month
+  # make sure today is in
   x <- filter_date(data.frame(date = c(Sys.Date(), Sys.Date() - runif(n = 15, min = -50, max = 50))))
   expect_true(is.data.frame(x))
   expect_identical(unique(format(x$date, "%m")), format(Sys.Date(), "%m"))
 
   # -- last month
-  x <- filter_date(data.frame(date = c(Sys.Date(), Sys.Date() - runif(n = 15, min = -50, max = 50))),
+  # make sure one date belongs to last month
+  x <- filter_date(data.frame(date = c(as.Date(paste(format(Sys.Date(), "%Y"),
+                                                     as.numeric(format(Sys.Date(), "%m")) - 1,
+                                                     "15",
+                                                     sep = "-")),
+                                       Sys.Date() - runif(n = 15, min = -50, max = 50))),
                    ref = Sys.Date() - as.integer(format(Sys.Date(), "%d")))
   expect_true(is.data.frame(x))
   expect_identical(as.integer(unique(format(x$date, "%m"))), as.integer(format(Sys.Date(), "%m")) - 1L)
 
   # -- this year
+  # make sure today is in
   x <- filter_date(data.frame(date = c(Sys.Date(), Sys.Date() - runif(n = 15, min = -365, max = 365))),
                    ref = Sys.Date(),
                    unit = "year")
