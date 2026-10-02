@@ -3,18 +3,18 @@
 test_that("filter_date works", {
 
   # -- default use case: this month
-  x <- filter_date(data.frame(date = Sys.Date() - runif(n = 15, min = -50, max = 50)))
+  x <- filter_date(data.frame(date = c(Sys.Date(), Sys.Date() - runif(n = 15, min = -50, max = 50))))
   expect_true(is.data.frame(x))
   expect_identical(unique(format(x$date, "%m")), format(Sys.Date(), "%m"))
 
   # -- last month
-  x <- filter_date(data.frame(date = Sys.Date() - runif(n = 15, min = -50, max = 50)),
+  x <- filter_date(data.frame(date = c(Sys.Date(), Sys.Date() - runif(n = 15, min = -50, max = 50))),
                    ref = Sys.Date() - as.integer(format(Sys.Date(), "%d")))
   expect_true(is.data.frame(x))
   expect_identical(as.integer(unique(format(x$date, "%m"))), as.integer(format(Sys.Date(), "%m")) - 1L)
 
   # -- this year
-  x <- filter_date(data.frame(date = Sys.Date() - runif(n = 15, min = -365, max = 365)),
+  x <- filter_date(data.frame(date = c(Sys.Date(), Sys.Date() - runif(n = 15, min = -365, max = 365))),
                    ref = Sys.Date(),
                    unit = "year")
   expect_true(is.data.frame(x))
