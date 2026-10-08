@@ -1,7 +1,10 @@
-# ktools: Utility Tools
+# ktools: Tools for Tracing, Shiny Routing, and JavaScript Dependencies
 
-Various utility tools to make life easier and homogenize patterns across
-projects.
+Provides utility tools designed to homogenize development patterns
+across projects. This includes specialized tracing utilities, mechanisms
+for generating unique identifiers, JavaScript dependency management,
+targeting unique input from multiple HTML tags within Shiny apps and
+more.
 
 ## See also
 
