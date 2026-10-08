@@ -1,5 +1,5 @@
 Package: ktools
-Title: Utility Tools
+Title: Tools for Tracing, Shiny Routing, and JavaScript Dependencies.
 Version: 0.9.10
 Authors@R: 
     person(given = "Philippe",
@@ -7,7 +7,10 @@ Authors@R:
            role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0009-0003-9666-7490"),
            email = "philippe.peret@hotmail.com")
-Description: Various utility tools to make life easier and homogenize patterns across projects.
+Description: Provides utility tools designed to homogenize development patterns
+    across projects. This includes specialized tracing utilities, mechanisms 
+    for generating unique identifiers, JavaScript dependency management, 
+    targeting unique input from multiple HTML tags within Shiny apps and more.
 License: GPL (>= 3) + file LICENSE
 URL: https://thekangaroofactory.github.io/ktools/
 BugReports: https://github.com/thekangaroofactory/ktools/issues
