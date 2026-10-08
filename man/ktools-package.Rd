@@ -4,9 +4,9 @@
 \name{ktools-package}
 \alias{ktools}
 \alias{ktools-package}
-\title{ktools: Utility Tools}
+\title{ktools: Tools for Tracing, Shiny Routing, and JavaScript Dependencies}
 \description{
-Various utility tools to make life easier and homogenize patterns across projects.
+Provides utility tools designed to homogenize development patterns across projects. This includes specialized tracing utilities, mechanisms for generating unique identifiers, JavaScript dependency management, targeting unique input from multiple HTML tags within Shiny apps and more.
 }
 \seealso{
 Useful links:
