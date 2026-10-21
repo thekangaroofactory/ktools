@@ -3,7 +3,7 @@
 Provides utility tools designed to homogenize development patterns
 across projects. This includes specialized tracing utilities, mechanisms
 for generating unique identifiers, JavaScript dependency management,
-targeting unique input from multiple HTML tags within Shiny apps and
+targeting unique input from multiple HTML tags within 'Shiny' apps and
 more.
 
 ## See also
