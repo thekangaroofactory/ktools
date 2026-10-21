@@ -1,6 +1,6 @@
 # ktools
 
-R package wrapping various utility tools.
+R package wrapping utility tools for tracing, shiny routing, JavaScript dependencies and more.
 
 <!-- badges: start -->
 
@@ -18,8 +18,8 @@ Install the ktools package as follows:
 install.packages('ktools', repos = c('https://thekangaroofactory.r-universe.dev', 'https://cloud.r-project.org'))
 ```
 
-## From CRAN
+## From GitHub
 
 ```{r}
-install.packages("ktools")
+pak::pkg_install("thekangaroofactory/ktools")
 ```
